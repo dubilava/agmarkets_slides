@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Agricultural Markets</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Ubilava" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Agricultural Markets
+## Lecture 4: Spatial Price Relationships
+### David Ubilava
+### August 2020
+
+---
+
+
+
+
+
+
+# Spatial Market Integration
+
+Agricultural commodities typically are produced in geographically diverse locations, and can be costly to transport.
+
+Relationships among geographically distant (or spatially separated) markets are often examined by comparing prices in these markets.
+
+---
+
+
+# Spatial Market Integration
+
+To the extent that supply and demand forces differ across markets, prices of agricultural commodities can (and do) vary spatially. 
+
+Given a competitive market structure, spatial price relationships are determined by *transfer costs* among markets. 
+
+While transportation is one of the key determinants of the transfer costs, its other important components may include costs related to contracting, insurance, financing, etc.
+
+---
+
+
+# Spatial Market Integration
+
+Spatial arbitrage, through the actions of economic agents, ensures that the price differential between regions `\(i\)` and `\(j\)`, `\(p_{jt}-p_{it}\)` at any given time, `\(t\)`, does not exceed the transfer costs, `\(\tau_{ijt}\)`: `$$p_{jt}-p_{it} \le \tau_{ijt}.$$` This is referred to as *long--run competitive equilibrium*. 
+
+The condition will hold as an equality if the two regions engage in a trade with each other, thereby exhausting the rents to spatial arbitrage. 
+
+That is, when trade occurs, price differentials should move one-for-one with the costs of spatial arbitrage; otherwise, there may be no correlation among market prices even though the competitive equilibrium holds. 
+
+---
+
+
+# Spatial Market Integration
+
+&lt;!-- Note that spatial arbitrage is an equilibrium concept: actual prices may diverge from this relationship due to exogenous shocks, but the actions of arbitrageurs will revert the price spread toward the transfer cost. --&gt;
+
+*Market integration*, defined as tradability or contestability between markets, is a (related but) slightly different concept from competitive spatial equilibrium. 
+
+Market integration implies the transfer of excess demand from one market to another, manifest in the physical flow of commodity, the transmission of price shocks from one market to another, or both. 
+
+---
+
+
+# The Law of One Price
+
+Two spatially separated markets: 
+
+- can be in equilibrium but not necessarily integrated (e.g., when the spatial arbitrage condition is satisfied but no trade occurs); 
+- can be integrated but not necessarily in equilibrium (e.g., when trade occurs but the rents to spatial arbitrage are not exhausted). 
+
+When both conditions are met, the *law of one price* (LOP) holds. 
+
+---
+
+
+# The Law of One Price
+
+The LOP suggests that, abstracting from transfer costs, regional markets that are linked by trade and arbitrage, will have a common, or unique price. 
+
+While the LOP (in its strong form) rarely holds in practice, there is evidence for LOP in empirical literature that explicitly accounts for transactions costs, or that explicitly focuses on traded rather than non-traded commodities.
+
+---
+
+
+# The Law of One Price
+
+&lt;!-- A price transmission ratio, which measures the degree to which demand or supply shocks arising in one region ($\eta_i$) are transmitted to another region: `$$r_{ij} = \frac{\partial p_j}{\partial \eta_i}/\frac{\partial p_i}{\partial \eta_i},$$` where `\(r_{ij}\)` is the price transmission ratio, and its expectation is seen as a measure of market integration.  --&gt;
+
+Several caveats are in order:
+
+- price co-movement between two regions can arise for reasons other than those that link these regions via trade. 
+- prices that satisfy the LOP may not move together, if transfer costs are large and volatile. 
+- it is not necessary for two regions to be direct trading partners for an integration to be present. As long as these regions are part of a common trading network, they may be integrated just as strongly as if they were direct trading partners. 
+
+---
+
+
+# The Law of One Price
+
+Several important implications follow: 
+
+- because trade will only occur when the price differential equals or exceeds the transfer cost, shocks to production or consumption may result in discontinuous trade flows over time. 
+- to the extent that trade takes place, the price differential will remain the same (and be equal to the transfer cost). 
+- integrated markets will be characterized by the simultaneous determination of prices, trade, and storage.
+
+---
+
+
+# Efficient Markets
+
+Key to the LOP is the notion of *efficient markets*. 
+
+In general, efficiency is meant to imply that the allocation of resources is such that aggregate welfare cannot be further improved by reallocating of resources. 
+
+In the context of spatial arbitrage, market efficiency is interpreted to imply that no opportunities for profits have been left unexploited by arbitrageurs. 
+
+That is, the efficient market hypothesis assumes away profitable arbitrage opportunities. 
+
+---
+
+# Structure of Prices
+
+&lt;!-- Perfect market integration, i.e., when `\(E(r_{ij})=1\)`, is a more restrictive notion than the LOP. For example, it is possible that the LOP holds even though two regions have expected price transmission ratio of less than one. On the other hand, a unit price transmission ratio would typically imply the strong form of the LOP.  --&gt;
+
+The LOP may not necessarily apply if buyers have less than perfect information about where to find the lowest price commodity; nor may they apply across international borders, because some goods are not transferable. 
+
+These principles facilitate the so-called *structure of prices* - a function of the pattern of trade and transfer costs between regions that engage in trade. 
+
+---
+
+
+# Structure of Prices
+
+Implications of the structure of prices are that: 
+
+- the lowest-cost source determines the price prevailing in each deficit market; 
+- producers sell in whichever market yields the highest net return; 
+- the price prevailing in each surplus producing area is the deficit market price less the cost of transferring a product to that market. 
+
+Of course, the foregoing assumes a competitive market structure, with a homogeneous commodity, informed traders, and no barriers to trade.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

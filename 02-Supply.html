@@ -4,6 +4,7 @@
     <title>Agricultural Markets</title>
     <meta charset="utf-8" />
     <meta name="author" content="David Ubilava" />
+    <script src="libs/header-attrs-2.9.7/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -16,7 +17,7 @@ class: center, middle, inverse, title-slide
 # Agricultural Markets
 ## Lecture 2: Supply and Market Structure
 ### David Ubilava
-### October 2020
+### University of Sydney
 
 ---
 
@@ -25,115 +26,136 @@ class: center, middle, inverse, title-slide
 
 
 
-# Supply by a Single Firm
+# Supply by a Firm
 
-Much like consumers are utility--maximizers, the firms are profit--maximizers. For a firm producing a product, `\(q\)`, using a set of inputs, `\(\mathbf{z}=(z_1,\ldots,z_k)'\)` , the short-run profit is defined as: `$$\pi = pq-w'z,$$` where `\(p\)` is a unit price of `\(q\)`, and `\(\mathbf{w}=(w_1,\ldots,w_k)\)` is a vector of input costs.
+- Much like consumers are utility-maximizers, firms are profit-maximizers. 
+- For a firm producing a product, `\(q\)`, using a set of inputs, `\(\mathbf{z}=(z_1,\ldots,z_k)'\)` , the short-run profit is defined as: `$$\pi = pq-w'z,$$` where `\(p\)` is a unit price of `\(q\)`, and `\(\mathbf{w}=(w_1,\ldots,w_k)\)` is a vector of input costs.
 
 ---
 
 
-# Supply by a Single Firm
+# Supply by a Firm
 
-A firm's output is related to the inputs through a production function: `$$q = q(\mathbf{z})$$`
-
-The profit function, thus, can be rewritten as: `$$\pi = pq(\mathbf{z})-\mathbf{w}'\mathbf{z}.$$` This equation can be used in deriving the producer's supply function of output and demand functions for inputs. 
+- A firm's output is related to the inputs through a production function: `$$q = q(\mathbf{z})$$`
+- The profit function, thus, can be rewritten as: `$$\pi = pq(\mathbf{z})-\mathbf{w}'\mathbf{z}.$$` 
+- This equation can be used in deriving a producer's supply function of output and demand functions for inputs. 
 &lt;!-- The relevant supply function depends on the form of the production function, hence the form of the cost functions. --&gt;
 
 
 ---
 
 
-# Supply by a Single Firm
+# Supply by a Firm
 
-A producer maximizes profits by using each factor up to the point where the last unit just pays for itself. 
-
-Optimal use of input is determined with respect to the (known) production function. The functional form of production is such that output is increasing with input, but at a decreasing rate. 
-
-The rate of increase in output is called the *marginal product* of input: `$$MP_i=\frac{\partial q}{\partial z_i}$$`
-
----
-
-
-# Supply by a Single Firm
-
-Following the rule of profit maximization, the optimum level of factor use is at the point where the `\(MP_i\)` multiplied by price of output, `\(p\)`, just equals to the unit cost of input, `\(w_i\)`, which yields the following relationship:$$\frac{\partial q}{\partial z_i} = \frac{w_i}{p}$$
-
-This relationship implies that an increase of the input cost, will lead to reduced use of that input and lower output, everything else held constant. Moreover, optimal factor use will change only with an increase or decrease in relative prices.
+- A producer maximizes profits by using each input up to the point where the last unit just pays for itself. 
+- Optimal use of inputs is determined with respect to the (known) production function. 
+- The functional form of production is such that output is increasing with input, but at a decreasing rate. 
+- The rate of increase in output is called the *marginal product* of input: `$$MP_i=\frac{\partial q}{\partial z_i}$$`
 
 ---
 
 
-# Market Supply
+# Supply by a Firm
 
-Market supply is a (horizontal) sum of individual firm's supply curves. Assuming `\(n\)` identical firms, each producing `\(q\)` units of optimal output, the aggregate market supply is `\(Q = nq\)`. The supply curve, generally, is upward sloping, which is inferred in the *law of supply*. 
+- Following the rule of profit maximization, the optimum level of factor use is at the point where the `\(MP_i\)` multiplied by price of output, `\(p\)`, just equals to the unit cost of input, `\(w_i\)`, which yields the following relationship:$$\frac{\partial q}{\partial z_i} = \frac{w_i}{p}$$
+- This relationship implies that an increase of the input cost, will lead to reduced use of that input and lower output, everything else held constant. 
+- Moreover, optimal factor use will change only with an increase or decrease in relative prices.
 
 ---
 
 
 # Market Supply
 
-Own price of a good is a sole factor affecting the quantity supplied resulting in the movement along the supply curve. 
+- Market supply is a (horizontal) sum of individual firm's supply curves. 
+- Assuming `\(n\)` identical firms, each producing `\(q\)` units of optimal output, the aggregate market supply is `\(Q = nq\)`. The supply curve, generally, is upward sloping, which is inferred in the *law of supply*. 
 
-All other factors *shift the supply curve*. Such factors can be: 
+---
 
-- prices of inputs; 
-- prices of related goods; 
-- goods competing for the same factors of production (e.g., the same land for corn and soybeans); 
-- joint production of goods (e.g., soybean meal and soybean oil); 
-- factors affecting production costs and output quantities (e.g., technology and weather); 
-- production risks; 
-- taxes and subsidies, etc.
+
+# Market Supply
+
+- Own price of a good is a sole factor affecting the quantity supplied resulting in the movement along the supply curve. 
+- All other factors *shift the supply curve*. Such factors can be: 
+  * prices of inputs; 
+  * prices of related goods (e.g., palm oil and soybean oil); 
+  * goods competing for the same factors of production (e.g., the land used to produce corn and soybeans); 
+  * joint production of goods (e.g., soybean meal and soybean oil); 
+  * factors affecting production costs and output quantities (e.g., technology); 
+  * production risks (e.g., weather-related); 
+  * taxes and subsidies.
 
 ---
 
 
 # Supply Elasticity
 
-The responsiveness of the supply to price changes is known as *price elasticity of supply* (supply elasticity). Mathematically, supply elasticity is given by: `$$\eta = \frac{\partial Q}{Q}/\frac{\partial P}{P} \equiv \frac{\partial Q}{\partial P}\frac{P}{Q}$$`
+- The responsiveness of the supply to price changes is known as *price elasticity of supply* (supply elasticity). 
+- Mathematically, supply elasticity is given by: `$$\eta = \frac{\partial Q}{Q}/\frac{\partial P}{P} \equiv \frac{\partial Q}{\partial P}\frac{P}{Q}$$`
 
 ---
 
 
 # Supply Elasticity
 
-In the very short run, supply is perfectly inelastic (vertical line) and the elasticity is zero. Inelastic supply refers to elasticity measures between `\(0\)` and `\(1\)`. Elastic supply refers to elasticity measures greater than `\(1\)`. A perfectly elastic supply (horizontal line) has the elasticity measure or `\(\infty\)`.
+- Supply elasticities can be categorized as:
+  * Perfectly inelastic (vertical line): the elasticity measure of zero. 
+  * Inelastic: the elasticity measures between `\(0\)` and `\(1\)`. 
+  * Elastic: the elasticity measures greater than `\(1\)`. 
+  * Perfectly elastic (horizontal line): the elasticity measure of `\(\infty\)`.
+- In the very short run, agricultural supply elasticity is nearly zero; as the time-frame increases, producers are able to react to price changes and, thus, the supply elasticity increases.
 
-Assuming a linear supply curve, as quantity and price increase (i.e., as we move upwards along the supply curve) the price elasticity of supply converges to `\(1\)`. Moreover, if a linear supply curve intersects with the origin, the elasticity of supply is always `\(1\)`.
+---
+
+
+# Supply Elasticity
+
+- Assuming a linear supply curve, as quantity and price increase (i.e., as we move upwards along the supply curve) the price elasticity of supply converges to `\(1\)`. 
+- Moreover, if a linear supply curve intersects with the origin, the elasticity of supply is always `\(1\)`.
 
 ---
 
 
 # Market Structure
 
-To begin, we assume that there are many sellers and buyers in a market, and that each individual seller or buyer cannot influence the market. Furthermore, we assume that the product is homogenous, that there are no costs associated with entering and leaving the market, and that the information on economic forces that are determining prices is complete and freely available for market participants. Such market is referred to as a *perfectly competitive market*. 
-
-A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
-
----
-
-
-# Market Structure
-
-On the other end of the spectrum, we have a monopoly. In the case of a monopoly, we have a single seller. The product homogeneity assumption is automatically satisfied. However, there are very high costs associated with entering the market.
-
-A monopolist, unlike a competitive firm, is no longer a price-taker; instead, they can 'manipulate' quantity demanded by changing prices, or (equivalently) they can manipulate market prices by changing their output. 
-
-Market equilibrium under monopoly leads to an inefficient outcome, as some of the surplus - which would have been attained under a perfectly competitive market - is lost; this is known as the *dead-weight loss*.
-
-
+- A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. 
+- Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
 
 ---
 
 
 # Market Structure
 
-In-between of a perfectly competitive market and a monopoly we have oligopoly, which means several sellers (or buyers) on the market. 
+- A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. 
+- Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
 
-If these sellers collude (i.e., form a cartel), the market outcome under oligopoly can be identical to that under monopoly. 
+---
 
-Even if they do not collude, but act strategically, they can still extract additional surplus from consumers, also leading to an inefficient outcome and the dead-weight loss (albeit not as large as that under monopoly). 
 
-In some instances - e.g., if oligopolists engage in a 'price war' - the market equilibrium can be similar to that under a perfectly competitive market.
+# Market Structure
+
+- On the other end of the spectrum, we have a monopoly. 
+- In the case of a monopoly, we have a single seller. 
+- The product homogeneity assumption is automatically satisfied. 
+- There are very high costs associated with entering the market, however.
+
+---
+
+
+# Market Structure
+
+- A monopolist, unlike a competitive firm, is no longer a price-taker; instead, they can 'manipulate' quantity demanded by changing prices, or they can manipulate market prices by changing their output. 
+- Market equilibrium under monopoly leads to an inefficient outcome, as some of the surplus - which would have been attained under a perfectly competitive market - is lost; such loss is referred to as the *dead-weight loss*.
+
+---
+
+
+# Market Structure
+
+- In-between of a perfectly competitive market and a monopoly we have oligopoly, which means several sellers (or buyers) on the market. 
+- If these sellers collude (i.e., form a cartel), the market outcome under oligopoly can be identical to that under monopoly. 
+- Even if they do not explicitly collude, but act strategically, they can still extract additional surplus from consumers, also leading to an inefficient outcome and the dead-weight loss (albeit not as large as that under collusion). 
+- In some instances - e.g., if firms engage in a 'price war' - the market equilibrium can be similar to that under a perfect competition.
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

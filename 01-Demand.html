@@ -4,7 +4,7 @@
     <title>Agricultural Markets</title>
     <meta charset="utf-8" />
     <meta name="author" content="David Ubilava" />
-    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.9.7/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -104,7 +104,7 @@ class: center, middle, inverse, title-slide
 
 - All other factors may influence demand by *shifting the demand curve*. 
 
-- These factors can be: 
+- These factors can be:
   * economic (e.g., prices and availability of other goods and services, income and its distribution); 
   * demographic (population size and its distribution by age, gender, ethnicity, etc.); 
   * tastes and preferences (influenced by information and advertising, lifestyle, etc.).
@@ -113,6 +113,8 @@ class: center, middle, inverse, title-slide
 
 
 # Demand Elasticities
+
+## Price Elasticities of Demand
 
 - The responsiveness of quantity demanded to a price change - known as the own-price elasticity of demand (demand elasticity) - may vary from product to product, over time, and across locations. For example:
   * quantity of salt purchased will not vary greatly due to the price change, but quantity of bananas purchased will likely be more responsive to price changes. From the consumers' standpoint: bananas have substitutes, but salt doesn't. 
@@ -123,6 +125,8 @@ class: center, middle, inverse, title-slide
 
 # Demand Elasticities
 
+## Price Elasticities of Demand
+
 - Mathematically, price elasticity is given by: `$$\epsilon = \frac{\partial Q}{Q}/\frac{\partial P}{P},$$` where `\(\partial\)` denotes an infinitesimal change. Note that `\(\frac{\partial X}{X} \equiv \%\Delta X\)`, and so price elasticity is defined as the percentage change in quantity relative to the percentage change in price. 
 - That the elasticity is measured in relative (or percentage) terms, makes it an attractive measure as it facilitates a direct comparison between goods with possibly different units of measurement of quantities and prices. 
 
@@ -131,13 +135,17 @@ class: center, middle, inverse, title-slide
 
 # Demand Elasticities
 
+## Price Elasticities of Demand
+
 - The foregoing equation can be rewritten as: `$$\epsilon = \frac{\partial Q}{\partial P}\frac{P}{Q},$$` where `\(\frac{\partial Q}{\partial P}\)` is the slope of the demand curve. 
-- Because of the downward-sloping demand curve, the price elasticity measure ranges from zero to negative infinity. This range consists of *inelastic* ($|\epsilon_{ii}| &lt; 1$) and *elastic* ($|\epsilon_{ii}| &gt; 1$) segments, with `\(|\epsilon_{ii}| = 1\)` representing the *unit-elastic* case.
+- Because of the downward-sloping demand curve, the price elasticity measure will necessarily be negative. The magnitude of the elasticity measure helps us differentiate between *inelastic*, `\(|\epsilon_{ii}| &lt; 1\)`, and *elastic*, `\(|\epsilon_{ii}| &gt; 1\)`, segments of the demand curve, with `\(|\epsilon_{ii}| = 1\)` representing the *unit-elastic* case.
 
 ---
 
 
 # Demand Elasticities
+
+## Price Elasticities of Demand
 
 - For most functional forms, including the linear demand, the elasticity coefficient varies along the demand curve. 
 - Exceptions are if demand is represented by a straight horizontal line, a straight vertical line, a power function, and a rectangular hyperbola. 
@@ -148,6 +156,8 @@ class: center, middle, inverse, title-slide
 
 # Demand Elasticities
 
+## Price Elasticities of Demand
+
 - The responsiveness of the demand for a good `\(i\)` to a price changes of a related good `\(j\)` is known as the cross-price elasticity of demand (cross-price elasticity). 
 - Mathematically, cross-price elasticity is given by: `$$\epsilon_{ij} = \frac{\partial Q_i}{Q_i}/\frac{\partial P_j}{P_j},$$` or, alternatively: `$$\epsilon_{ij} = \frac{\partial Q_i}{\partial P_j}\frac{P_j}{Q_i}$$`
 
@@ -156,7 +166,9 @@ class: center, middle, inverse, title-slide
 
 # Demand Elasticities
 
-- Three types of relationships - which are related to the substitution effect - can be identified depending on the sign of cross-price elasticity: substitute goods ($\epsilon_{ij} &gt; 0$), complement goods ($\epsilon_{ij} &lt; 0$), and independent goods ($\epsilon_{ij} = 0$).
+## Price Elasticities of Demand
+
+- Three types of relationships - which are related to the substitution effect - can be identified depending on the sign of cross-price elasticity: substitute goods, `\(\epsilon_{ij} &gt; 0\)`; complement goods, `\(\epsilon_{ij} &lt; 0\)`; and independent goods, `\(\epsilon_{ij} = 0\)`.
 
 ---
 
@@ -186,7 +198,7 @@ class: center, middle, inverse, title-slide
 
 ## Income Elasticity of Demand
 
-- Three types of goods can be identified based on the sign and magnitude of income elasticity. These are normal goods ($0 \le \epsilon_{m} \le 1$), superior goods ($\epsilon_{m} &gt; 1$), and inferior goods ($\epsilon_{m} &lt; 0$).
+- Three types of goods can be identified based on the sign and magnitude of income elasticity. These are normal goods, `\(0 \le \epsilon_{m} \le 1\)`; superior goods, `\(\epsilon_{m} &gt; 1\)`; and inferior goods, `\(\epsilon_{m} &lt; 0\)`.
 
 ---
 
@@ -197,7 +209,7 @@ class: center, middle, inverse, title-slide
 
 - Typically, the income elasticity of demand has a positive value: as income increases, consumers tend to buy more of most products. 
 - However, income elasticities tend to decline as incomes increase. 
-- As a concequence, for a very low-income country, the income elasticity of demand for food as a whole is around 0.8, while for a very high-income country it is around 0.1. 
+- As a consequence, for a very low-income country, the income elasticity of demand for food as a whole is around 0.8, while for a very high-income country it is around 0.1. 
 - This difference in income elasticities means that changes to income have a much larger relative impact on food demand in low-income countries than in high-income countries.
 
 ---
@@ -207,8 +219,8 @@ class: center, middle, inverse, title-slide
 
 ## Income Elasticity of Demand
 
-- By necessity, poor people have no choice but to spend the bulk of their income on food – at times as much as 80 percent – and when their incomes rise, they buy more food. 
-- Eventually, however, as income increases, people start spending on other items. 
+- By necessity, poor people have no choice but to spend the large share of their income on food, at times as much as 80 percen; and when their incomes rise, they buy more food. 
+- Eventually, however, as income increases, people start spending it on other items. 
 - People spending a smaller share of income on food, as their income increases, is known as *Engel's law*.
 
 ---
@@ -220,8 +232,17 @@ class: center, middle, inverse, title-slide
 
 - Rising incomes lead people to consume more total calories, and also to consume more expensive foods. 
 - These foods are often more highly processed, and include more animal products as well as more fruits and vegetables. 
-- The transition in consumption from a few inexpensive starchy staples the greater variety of more expensive foods is known as *Bennett's law*. 
-- But note that when consumers switch from starchy staples to animal products, demand for cereal grains may, indeed, rise: consumers reduce their direct consumption of cereal grains as food, but increase their total usage as animal feed.
+- The transition in consumption from a few inexpensive starchy staples to the greater variety of more expensive foods is known as *Bennett's law*. 
+- Such transition does not necessariy decrease demand for cereal grains, however. While consumers reduce their direct consumption of cereal grains as food, they increase the total usage of cereal grains as animal feed.
+
+---
+
+
+# Readings
+
+Tomek &amp; Kaiser, Chapters 2 &amp; 3
+
+Norton, Alwang &amp; Masters, Chapter 3
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

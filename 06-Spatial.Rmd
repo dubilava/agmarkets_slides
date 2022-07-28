@@ -1,29 +1,24 @@
-<!DOCTYPE html>
-<html lang="" xml:lang="">
-  <head>
-    <title>Agricultural Markets</title>
-    <meta charset="utf-8" />
-    <meta name="author" content="David Ubilava" />
-    <script src="libs/header-attrs-2.9.7/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-  <body>
-    <textarea id="source">
-class: center, middle, inverse, title-slide
-
-# Agricultural Markets
-## Lecture 4: Market Integration and Trade
-### David Ubilava
-### University of Sydney
-
+---
+title: "Agricultural Markets"
+subtitle: "Lecture 4: Market Integration and Trade"
+author: "David Ubilava"
+date: "University of Sydney"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, style.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+header-includes: 
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
 ---
 
 
-
-
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 
 
 # Spatial Market Integration
@@ -45,7 +40,7 @@ class: center, middle, inverse, title-slide
 
 # Spatial Market Integration
 
-- Spatial arbitrage, through the actions of economic agents, ensures that the price differential between regions `\(i\)` and `\(j\)`, `\(p_{jt}-p_{it}\)` at any given time, `\(t\)`, does not exceed the transfer costs, `\(\tau_{ijt}\)`: `$$p_{jt}-p_{it} \le \tau_{ijt}.$$` This is referred to as *long--run competitive equilibrium*. 
+- Spatial arbitrage, through the actions of economic agents, ensures that the price differential between regions $i$ and $j$, $p_{jt}-p_{it}$ at any given time, $t$, does not exceed the transfer costs, $\tau_{ijt}$: $$p_{jt}-p_{it} \le \tau_{ijt}.$$ This is referred to as *long--run competitive equilibrium*. 
 - The condition will hold as an equality if the two regions engage in a trade with each other, thereby exhausting the rents to spatial arbitrage. 
 - That is, when trade occurs, price differentials should move one-for-one with the costs of spatial arbitrage; otherwise, there may be no correlation among market prices even though the competitive equilibrium holds. 
 
@@ -112,7 +107,15 @@ class: center, middle, inverse, title-slide
 - The LOP may not apply if buyers have less than perfect information about where to find the lowest price commodity; nor may they apply across international borders, because some goods are not transferable. 
 - These principles facilitate the so-called *structure of prices* - a function of the pattern of trade and transfer costs between the trading regions. 
 
-&lt;img src="04-Spatial_files/figure-html/structure-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+```{tikz structure, out.width='80%', fig.asp=0.6, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=TRUE}
+\definecolor{indianred}{rgb}{0.80,0.36,0.36}
+\definecolor{steelblue}{rgb}{0.27,0.51,0.71}
+\begin{tikzpicture}[scale=1]
+\draw[thick,dashed] (0,3) node[left] {$X$} -- (1,1) node[below] {$A$} -- (8,1) node[right] {$Y$} -- (5,4) node[above] {$B$} -- (0,3) -- (8,1);
+\draw (-0.5,3) node[steelblue,left] {$\$3.00$} (1,.5) node[steelblue,below] {$\$2.90$} (8.5,1) node[steelblue,right] {$\$3.30$} (5,4.5) node[steelblue,above] {$\$3.10$};
+\draw (0.5,2) node[indianred,below left] {$\$0.10$} (4.5,1.0) node[indianred,below] {$\$0.40$} (6.5,2.5) node[indianred,above right] {$\$0.20$} (3.0,3.5) node[indianred,above left] {$\$0.30$} (3.5,2) node[indianred,above right] {$\$0.50$};
+\end{tikzpicture}
+```
 
 ---
 
@@ -183,111 +186,6 @@ class: center, middle, inverse, title-slide
 
 # Readings
 
-Tomek &amp; Kaiser, Chapter 8
+Tomek & Kaiser, Chapter 8
 
-Norton, Alwang &amp; Masters, Chapter 16
-    </textarea>
-<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
-<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-<script>var slideshow = remark.create({
-"highlightStyle": "github",
-"countIncrementalSlides": false
-});
-if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
-  window.dispatchEvent(new Event('resize'));
-});
-(function(d) {
-  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
-  if (!r) return;
-  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
-  d.head.appendChild(s);
-})(document);
-
-(function(d) {
-  var el = d.getElementsByClassName("remark-slides-area");
-  if (!el) return;
-  var slide, slides = slideshow.getSlides(), els = el[0].children;
-  for (var i = 1; i < slides.length; i++) {
-    slide = slides[i];
-    if (slide.properties.continued === "true" || slide.properties.count === "false") {
-      els[i - 1].className += ' has-continuation';
-    }
-  }
-  var s = d.createElement("style");
-  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
-  d.head.appendChild(s);
-})(document);
-// delete the temporary CSS (for displaying all slides initially) when the user
-// starts to view slides
-(function() {
-  var deleted = false;
-  slideshow.on('beforeShowSlide', function(slide) {
-    if (deleted) return;
-    var sheets = document.styleSheets, node;
-    for (var i = 0; i < sheets.length; i++) {
-      node = sheets[i].ownerNode;
-      if (node.dataset["target"] !== "print-only") continue;
-      node.parentNode.removeChild(node);
-    }
-    deleted = true;
-  });
-})();
-(function() {
-  "use strict"
-  // Replace <script> tags in slides area to make them executable
-  var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container script'
-  );
-  if (!scripts.length) return;
-  for (var i = 0; i < scripts.length; i++) {
-    var s = document.createElement('script');
-    var code = document.createTextNode(scripts[i].textContent);
-    s.appendChild(code);
-    var scriptAttrs = scripts[i].attributes;
-    for (var j = 0; j < scriptAttrs.length; j++) {
-      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
-    }
-    scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-})();
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();</script>
-
-<script>
-slideshow._releaseMath = function(el) {
-  var i, text, code, codes = el.getElementsByTagName('code');
-  for (i = 0; i < codes.length;) {
-    code = codes[i];
-    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
-      text = code.textContent;
-      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
-          /^\$\$(.|\s)+\$\$$/.test(text) ||
-          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
-        code.outerHTML = code.innerHTML;  // remove <code></code>
-        continue;
-      }
-    }
-    i++;
-  }
-};
-slideshow._releaseMath(document);
-</script>
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-(function () {
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
-  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
-    script.src  = script.src.replace(/^https?:/, '');
-  document.getElementsByTagName('head')[0].appendChild(script);
-})();
-</script>
-  </body>
-</html>
+Norton, Alwang & Masters, Chapter 16

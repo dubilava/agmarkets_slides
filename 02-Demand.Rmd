@@ -1,6 +1,6 @@
 ---
 title: "Agricultural Markets"
-subtitle: "Lecture 1: Preferences and Demand"
+subtitle: "Lecture 2: Preferences and Demand"
 author: "David Ubilava"
 date: "University of Sydney"
 output:
@@ -97,9 +97,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Market Demand
 
 - Own price of the good is a sole factor affecting the quantity demanded, which results in *movement along the demand curve*. 
-
 - All other factors may influence demand by *shifting the demand curve*. 
-
 - These factors can be:
   * economic (e.g., prices and availability of other goods and services, income and its distribution); 
   * demographic (population size and its distribution by age, gender, ethnicity, etc.); 
@@ -113,8 +111,8 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Price Elasticities of Demand
 
 - The responsiveness of quantity demanded to a price change - known as the own-price elasticity of demand (demand elasticity) - may vary from product to product, over time, and across locations. For example:
-  * quantity of salt purchased will not vary greatly due to the price change, but quantity of bananas purchased will likely be more responsive to price changes. From the consumers' standpoint: bananas have substitutes, but salt doesn't. 
-  * quantity of rice purchased is likely to be less responsive to price changes in Asian countries, where it is considered a staple food, than in the Western world, where rice is viewed more as a side dish, perhaps with more substitutes.
+  * we don't buy more or less salt if its price changes, but our purchase of bananas will likely be more responsive to price changes. From a consumers' standpoint, bananas have substitutes, but salt doesn't. 
+  * quantity of rice purchased is likely to be less responsive to price changes in Asia, where it is a staple food, than in Europe, where rice is viewed more as a side dish, perhaps with more substitutes.
 
 ---
 
@@ -124,7 +122,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Price Elasticities of Demand
 
 - Mathematically, price elasticity is given by: $$\epsilon = \frac{\partial Q}{Q}/\frac{\partial P}{P},$$ where $\partial$ denotes an infinitesimal change. Note that $\frac{\partial X}{X} \equiv \%\Delta X$, and so price elasticity is defined as the percentage change in quantity relative to the percentage change in price. 
-- That the elasticity is measured in relative (or percentage) terms, makes it an attractive measure as it facilitates a direct comparison between goods with possibly different units of measurement of quantities and prices. 
 
 ---
 
@@ -134,6 +131,15 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Price Elasticities of Demand
 
 - The foregoing equation can be rewritten as: $$\epsilon = \frac{\partial Q}{\partial P}\frac{P}{Q},$$ where $\frac{\partial Q}{\partial P}$ is the slope of the demand curve. 
+- That the elasticity is measured in relative terms, makes it an attractive measure as it facilitates a direct comparison between goods with possibly different units of measurement of quantities and prices. 
+
+---
+
+
+# Demand Elasticities
+
+## Price Elasticities of Demand
+
 - Because of the downward-sloping demand curve, the price elasticity measure will necessarily be negative. The magnitude of the elasticity measure helps us differentiate between *inelastic*, $|\epsilon_{ii}| < 1$, and *elastic*, $|\epsilon_{ii}| > 1$, segments of the demand curve, with $|\epsilon_{ii}| = 1$ representing the *unit-elastic* case.
 
 ---
@@ -204,8 +210,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Income Elasticity of Demand
 
-- By necessity, poor people have no choice but to spend the large share of their income on food, at times as much as 80 percen; and when their incomes rise, they buy more food. 
-- Eventually, however, as income increases, people start spending it on other items. 
+- By necessity, poor people have no choice but to spend the large share of their income on food, at times as much as 80 percent; and when their incomes rise, they buy more food. 
+- Eventually, as the income grows, people start spending more of it on other items. 
 - People spending a smaller share of income on food, as their income increases, is known as *Engel's law*.
 
 ---
@@ -218,7 +224,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Rising incomes lead people to consume more total calories, and also to consume more expensive foods. 
 - These foods are often more highly processed, and include more animal products as well as more fruits and vegetables. 
 - The transition in consumption from a few inexpensive starchy staples to the greater variety of more expensive foods is known as *Bennett's law*. 
-- Such transition does not necessariy decrease demand for cereal grains, however. While consumers reduce their direct consumption of cereal grains as food, they increase the total usage of cereal grains as animal feed.
+- Such transition does not necessariy decrease demand for cereal grains. While consumers reduce their direct consumption of cereal grains as food, they increase the total usage of cereal grains as animal feed.
 
 ---
 

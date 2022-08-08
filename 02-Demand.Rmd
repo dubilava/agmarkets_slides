@@ -19,6 +19,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(data.table)
+library(ggplot2)
+library(cowplot)
+```
 
 
 # Choice and Individual Demand
@@ -43,6 +48,74 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Mathematically, for a set of goods, $\mathbf{x}=(x_1,\ldots,x_n)'$, the utility approach to the theory of demand is given by: $$\max U(\mathbf{x}),\;~~s.t.\;~\mathbf{p}'\mathbf{x} \leq M,$$ where $\mathbf{p}=(p_1,\ldots,p_n)'$ is a vector of prices for the given set of goods, and $M$ is the total disposable income (i.e., the budget). 
 - Thus, a consumer tries to attain the maximum utility they can afford, given their income and the prices of goods.
+
+---
+
+
+# Choice and Individual Demand
+
+```{r demand, out.width='40%', fig.asp=1.6, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=TRUE}
+
+x <- seq(0.0,110,0.1)
+
+r <- .25
+
+M <- 100
+p1 <- 1
+p2 <- 2
+
+xp1 <- (p1^(1/(r-1)))/(p1^(r/(r-1))+1^(r/(r-1)))*M
+xp2 <- (p2^(1/(r-1)))/(p2^(r/(r-1))+1^(r/(r-1)))*M
+
+yp1 <- (1^(1/(r-1)))/(1^(r/(r-1))+p1^(r/(r-1)))*M
+yp2 <- (1^(1/(r-1)))/(1^(r/(r-1))+p2^(r/(r-1)))*M
+
+U1 <- M*(p1^(r/(r-1))+1^(r/(r-1)))^((1-r)/r)
+U2 <- M*(p2^(r/(r-1))+1^(r/(r-1)))^((1-r)/r)
+
+y1 <- (U1^r-x^r)^(1/r)
+y2 <- (U2^r-x^r)^(1/r)
+
+b1 <- M/1-p1/1*x
+b2 <- M/1-p2/1*x
+
+dt1 <- data.table(x,y1,y2,b1,b2)
+
+gg1 <- ggplot(dt1)+
+  geom_line(aes(x=x,y=y1),size=1,color="indianred",na.rm=T)+
+  geom_line(aes(x=x,y=y2),size=1,color="indianred",na.rm=T)+
+  geom_line(aes(x=x,y=b1),size=1,color="gray50",linetype=5,na.rm=T)+
+  geom_line(aes(x=x,y=b2),size=1,color="gray50",linetype=5,na.rm=T)+
+  geom_segment(aes(x=0,y=yp1,xend=xp1,yend=yp1),linetype=3,size=1)+
+  geom_segment(aes(x=xp1,y=yp1,xend=xp1,yend=0),linetype=3,size=1)+
+  geom_segment(aes(x=0,y=yp2,xend=xp2,yend=yp2),linetype=3,size=1)+
+  geom_segment(aes(x=xp2,y=yp2,xend=xp2,yend=0),linetype=3,size=1)+
+  labs(x=expression(x[1]),y=expression(x[2]))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,115))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,115))+
+  theme_classic()+
+  theme(axis.title = element_text(size=18), axis.text = element_text(size=16),plot.margin = margin(1,0,0,0,"cm"))
+
+p <- seq(.5,4,0.01)
+xp <- (p^(1/(r-1)))/(p^(r/(r-1))+1^(r/(r-1)))*M
+
+dt2 <- data.table(p,xp)
+
+gg2 <- ggplot(dt2)+
+  geom_line(aes(x=xp,y=p),size=1,color="indianred",na.rm=T)+
+  geom_segment(aes(x=0,y=p1,xend=xp1,yend=p1),linetype=3,size=1)+
+  geom_segment(aes(x=xp1,y=p1,xend=xp1,yend=0),linetype=3,size=1)+
+  geom_segment(aes(x=0,y=p2,xend=xp2,yend=p2),linetype=3,size=1)+
+  geom_segment(aes(x=xp2,y=p2,xend=xp2,yend=0),linetype=3,size=1)+
+  labs(x=expression(x[1]),y=expression(p[1]))+
+  scale_x_continuous(expand=c(0,0),limits=c(0,115))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,4.5))+
+  theme_classic()+
+  theme(axis.title = element_text(size=18), axis.text = element_text(size=16),plot.margin = margin(1,0,0,0,"cm"))
+
+
+plot_grid(gg1,gg2,align="v",nrow=2,labels=c("Optimal Bundle","Individual Demand"),hjust=0)
+```
 
 ---
 

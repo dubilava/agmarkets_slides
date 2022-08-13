@@ -1,6 +1,6 @@
 ---
 title: "Agricultural Markets"
-subtitle: "Lecture 2: Supply and Market Structure"
+subtitle: "Lecture 3: Costs and Supply"
 author: "David Ubilava"
 date: "University of Sydney"
 output:
@@ -12,62 +12,150 @@ output:
     nature:
       highlightStyle: github
       countIncrementalSlides: false
+      ratio: '16:9'
 ---
 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(data.table)
+library(ggplot2)
+library(geomtextpath)
 ```
 
 
-# Supply by a Firm
+# Firms maximize profit
 
+.pull-left[
+![](Art/supply.png)
+]
+
+.pull-right[
 - Much like consumers are utility-maximizers, firms are profit-maximizers. 
 - For a firm producing a product, $q$, using a set of inputs, $\mathbf{z}=(z_1,\ldots,z_k)'$ , the short-run profit is defined as: $$\pi = pq-w'z,$$ where $p$ is a unit price of $q$, and $\mathbf{w}=(w_1,\ldots,w_k)$ is a vector of input costs.
+]
 
 ---
 
 
-# Supply by a Firm
+# Firms maximize profit
 
+.right-column[
 - A firm's output is related to the inputs through a production function: $$q = q(\mathbf{z})$$
 - The profit function, thus, can be rewritten as: $$\pi = pq(\mathbf{z})-\mathbf{w}'\mathbf{z}.$$ 
 - This equation can be used in deriving a producer's supply function of output and demand functions for inputs. 
 <!-- The relevant supply function depends on the form of the production function, hence the form of the cost functions. -->
+]
 
 
 ---
 
 
-# Supply by a Firm
+# Marginal product of input
 
+.right-column[
 - A producer maximizes profits by using each input up to the point where the last unit just pays for itself. 
 - Optimal use of inputs is determined with respect to the (known) production function. 
 - The functional form of production is such that output is increasing with input, but at a decreasing rate. 
 - The rate of increase in output is called the *marginal product* of input: $$MP_i=\frac{\partial q}{\partial z_i}$$
+]
 
 ---
 
 
-# Supply by a Firm
+# Marginal product of input
 
+.right-column[
 - Following the rule of profit maximization, the optimum level of factor use is at the point where the $MP_i$ multiplied by price of output, $p$, just equals to the unit cost of input, $w_i$, which yields the following relationship:$$\frac{\partial q}{\partial z_i} = \frac{w_i}{p}$$
 - This relationship implies that an increase of the input cost, will lead to reduced use of that input and lower output, everything else held constant. 
 - Moreover, optimal factor use will change only with an increase or decrease in relative prices.
+]
+
+---
+
+# Firm's costs and supply
+
+.pull-left[
+A firm's costs consist of:
+
+- fixed costs, $F$, that don't change in the short run; and
+- variable costs, $V(q)$, that depend on the level of output.
+
+Total costs: $C(q)=F+V(q)$.
+Average costs: $\frac{C(q)}{q}=\frac{F}{q}+\frac{V(q)}{q}$
+
+Marginal cost: $MC=\frac{\partial C(q)}{\partial q}$
+]
+
+.pull-right[
+```{r demand, out.width='90%', fig.asp=0.8, dpi=200, echo=FALSE, warning=FALSE, cache=TRUE}
+
+x <- seq(2,20,0.1)
+
+aa <- 20
+bb <- 1
+cc <- 5
+
+MC <- 6-1.3*x+.09*x^2
+ATC <- (aa+6*x-.65*x^2+.03*x^3)/x
+AVC <- (6*x-.65*x^2+.03*x^3)/x
+AFC <- (aa)/x
+
+dt <- data.table(x,MC,ATC,AVC,AFC)
+
+dl <- melt(dt,id.vars="x")
+
+gg <- ggplot(dl,aes(x=x,y=value,color=variable,linetype=variable))+
+  geom_textline(aes(label=variable),size=6,linewidth=1,na.rm=T,hjust=.85)+
+  labs(x="q",y="f(C)")+
+  scale_x_continuous(expand=c(0,0),limits=c(0,21))+
+  scale_y_continuous(expand=c(0,0),limits=c(0,17))+
+  theme_classic()+
+  theme(axis.title = element_text(size=18), axis.text = element_text(size=16),plot.margin = margin(1,0,0,0,"cm"),legend.position = "none")
+
+gg
+
+```
+]
+
+---
+
+
+# Economies of scale
+
+.right-column[
+*Economies of scale* happen when average total cost decreases as output increases, i.e. when the marginal cost curve is below the average total cost curve.
+
+*Diseconomies of scale* happen when average total cost increases as output increases, i.e. when marginal cost is above the average total cost curve.
+]
+
+---
+
+
+# Economies of scale
+
+.right-column[
+A measure of economies of scale, $s$, is the average total cost to marginal cost ratio, which is equivalent to the total cost elasticity of output: $$s=\frac{AC(q)}{MC(q)} \equiv \frac{\partial q}{\partial C(q)} \frac{C(q)}{q}$$
+
+We have increasing returns to scale (i.e., economies of scale) when $s>1$, decreasing returns to scale (i.e., diseconomies of scale) when $s<1$, and constant returns to scale when $s=1$.
+]
 
 ---
 
 
 # Market Supply
 
+.right-column[
 - Market supply is a (horizontal) sum of individual firm's supply curves. 
 - Assuming $n$ identical firms, each producing $q$ units of optimal output, the aggregate market supply is $Q = nq$. The supply curve, generally, is upward sloping, which is inferred in the *law of supply*. 
+]
 
 ---
 
 
 # Market Supply
 
+.right-column[
 - Own price of a good is a sole factor affecting the quantity supplied resulting in the movement along the supply curve. 
 - All other factors *shift the supply curve*. Such factors can be: 
   * prices of inputs; 
@@ -77,83 +165,46 @@ knitr::opts_chunk$set(echo = FALSE)
   * factors affecting production costs and output quantities (e.g., technology); 
   * production risks (e.g., weather-related); 
   * taxes and subsidies.
+]
 
 ---
 
 
 # Supply Elasticity
 
+.right-column[
 - The responsiveness of the supply to price changes is known as *price elasticity of supply* (supply elasticity). 
 - Mathematically, supply elasticity is given by: $$\eta = \frac{\partial Q}{Q}/\frac{\partial P}{P} \equiv \frac{\partial Q}{\partial P}\frac{P}{Q}$$
+]
 
 ---
 
 
 # Supply Elasticity
 
+.right-column[
 - Supply elasticities can be categorized as:
   * Perfectly inelastic (vertical line): the elasticity measure of zero. 
   * Inelastic: the elasticity measures between $0$ and $1$. 
   * Elastic: the elasticity measures greater than $1$. 
   * Perfectly elastic (horizontal line): the elasticity measure of $\infty$.
 - In the very short run, agricultural supply elasticity is nearly zero; as the time-frame increases, producers are able to react to price changes and, thus, the supply elasticity increases.
+]
 
 ---
 
 
 # Supply Elasticity
 
+.right-column[
 - Assuming a linear supply curve, as quantity and price increase (i.e., as we move upwards along the supply curve) the price elasticity of supply converges to $1$. 
 - Moreover, if a linear supply curve intersects with the origin, the elasticity of supply is always $1$.
-
----
-
-
-# Market Structure
-
-- A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. 
-- Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
-
----
-
-
-# Market Structure
-
-- A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. 
-- Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
-
----
-
-
-# Market Structure
-
-- On the other end of the spectrum, we have a monopoly. 
-- In the case of a monopoly, we have a single seller. 
-- The product homogeneity assumption is automatically satisfied. 
-- There are very high costs associated with entering the market, however.
-
----
-
-
-# Market Structure
-
-- A monopolist, unlike a competitive firm, is no longer a price-taker; instead, they can 'manipulate' quantity demanded by changing prices, or they can manipulate market prices by changing their output. 
-- Market equilibrium under monopoly leads to an inefficient outcome, as some of the surplus - which would have been attained under a perfectly competitive market - is lost; such loss is referred to as the *dead-weight loss*.
-
----
-
-
-# Market Structure
-
-- In-between of a perfectly competitive market and a monopoly we have oligopoly, which means several sellers (or buyers) on the market. 
-- If these sellers collude (i.e., form a cartel), the market outcome under oligopoly can be identical to that under monopoly. 
-- Even if they do not explicitly collude, but act strategically, they can still extract additional surplus from consumers, also leading to an inefficient outcome and the dead-weight loss (albeit not as large as that under collusion). 
-- In some instances - e.g., if firms engage in a 'price war' - the market equilibrium can be similar to that under a perfect competition.
+]
 
 ---
 
 
 # Readings
 
-Tomek & Kaiser, Chapters 4 & 5
+Tomek & Kaiser, Chapter 4
 

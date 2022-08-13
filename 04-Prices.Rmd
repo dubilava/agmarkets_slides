@@ -1,6 +1,6 @@
 ---
 title: "Agricultural Markets"
-subtitle: "Lecture 9: Price Discovery"
+subtitle: "Lecture 9: Markets and Prices"
 author: "David Ubilava"
 date: "University of Sydney"
 output:
@@ -17,6 +17,49 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+
+# Market Structure
+
+- A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. 
+- Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
+
+---
+
+
+# Market Structure
+
+- A perfectly competitive market is efficient, in the sense that the market equilibrium leads to the socially optimal outcome. 
+- Such markets only exist in theory, however, as one or several assumptions of a perfectly competitive market tend to be violated. 
+
+---
+
+
+# Market Structure
+
+- On the other end of the spectrum, we have a monopoly. 
+- In the case of a monopoly, we have a single seller. 
+- The product homogeneity assumption is automatically satisfied. 
+- There are very high costs associated with entering the market, however.
+
+---
+
+
+# Market Structure
+
+- A monopolist, unlike a competitive firm, is no longer a price-taker; instead, they can 'manipulate' quantity demanded by changing prices, or they can manipulate market prices by changing their output. 
+- Market equilibrium under monopoly leads to an inefficient outcome, as some of the surplus - which would have been attained under a perfectly competitive market - is lost; such loss is referred to as the *dead-weight loss*.
+
+---
+
+
+# Market Structure
+
+- In-between of a perfectly competitive market and a monopoly we have oligopoly, which means several sellers (or buyers) on the market. 
+- If these sellers collude (i.e., form a cartel), the market outcome under oligopoly can be identical to that under monopoly. 
+- Even if they do not explicitly collude, but act strategically, they can still extract additional surplus from consumers, also leading to an inefficient outcome and the dead-weight loss (albeit not as large as that under collusion). 
+- In some instances - e.g., if firms engage in a 'price war' - the market equilibrium can be similar to that under a perfect competition.
+
+---
 
 
 # Pricing Mechanisms
@@ -91,6 +134,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Readings
 
-Tomek & Kaiser, Chapter 11
+Tomek & Kaiser, Chapters 5 and 11
 
 

@@ -66,8 +66,8 @@ library(geomtextpath)
 # Marginal product of input
 
 .right-column[
-- Following the rule of profit maximization, the optimum level of factor use is at the point where the $MP_i$ multiplied by price of output, $p$, just equals to the unit cost of input, $w_i$, which yields the following relationship:$$\frac{\partial q}{\partial z_i} = \frac{w_i}{p}$$
-- This relationship implies that an increase of the input cost, will lead to reduced use of that input and lower output, everything else held constant. 
+- The optimum level of factor use is at the point where the $MP_i$ multiplied by price of output, $p$, just equals to the unit cost of input, $w_i$, which yields the following relationship:$$\frac{\partial q}{\partial z_i} = \frac{w_i}{p}$$
+- This relationship implies that an increase of the input cost, will lead to reduced use of that input and lower output, *ceteris paribus*. 
 - Moreover, optimal factor use will change only with an increase or decrease in relative prices.
 ]
 
@@ -76,12 +76,8 @@ library(geomtextpath)
 # Firm's costs and supply
 
 .pull-left[
-A firm's costs consist of:
+A firm's costs, $C(q)$, consist of fixed costs, $F$, that don't change in the short run, and variable costs, $V(q)$, that depend on output.
 
-- fixed costs, $F$, that don't change in the short run; and
-- variable costs, $V(q)$, that depend on the level of output.
-
-Total costs: $C(q)=F+V(q)$.
 Average costs: $\frac{C(q)}{q}=\frac{F}{q}+\frac{V(q)}{q}$
 
 Marginal cost: $MC=\frac{\partial C(q)}{\partial q}$
@@ -162,7 +158,7 @@ We have increasing returns to scale (i.e., economies of scale) when $s>1$, decre
   * prices of related goods (e.g., palm oil and soybean oil); 
   * goods competing for the same factors of production (e.g., the land used to produce corn and soybeans); 
   * joint production of goods (e.g., soybean meal and soybean oil); 
-  * factors affecting production costs and output quantities (e.g., technology); 
+  * factors affecting production costs and output quantities; 
   * production risks (e.g., weather-related); 
   * taxes and subsidies.
 ]
@@ -206,5 +202,11 @@ We have increasing returns to scale (i.e., economies of scale) when $s>1$, decre
 
 # Readings
 
+.pull-left[
+![](Art/readings.png)
+]
+
+.pull-right[
 Tomek & Kaiser, Chapter 4
+]
 

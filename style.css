@@ -7,6 +7,12 @@
   padding: 1em 3em 1em 3em;
 }
 
+@media only screen {
+  html {
+    font-size: calc(1.25*var(--base-font-size));
+  }
+}
+
 .title-slide .inverse .remark-slide-content {
   background-color: white;
 }

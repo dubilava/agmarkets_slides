@@ -143,7 +143,7 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 # Monopoly
 
 .right-column[
-- Market equilibrium under monopoly leads to an inefficient outcome, as some of the surplus - which would have been attained under a perfectly competitive market - is lost; such loss is referred to as the *dead-weight loss*.
+- Market equilibrium under monopoly leads to an inefficient outcome, as some of the surplus&mdash;which would have been attained under a perfectly competitive market&mdash;is lost; such loss is referred to as the *dead-weight loss*.
 ]
 
 ---
@@ -177,7 +177,7 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 - A monopolist may extract profits above and beyond the 'monopoly profits', if they can exercise the *price discrimination* strategy; i.e., if they can segment the market and charge different prices.
 - The following conditions must be met for this:
   * It must be possible to identify different markets with distinct demand elasticities;
-  * The markets must be separated - there should be no arbitrage opportunity between the markets
+  * The markets must be separated&mdash;there should be no arbitrage opportunity between the markets
 - Under these conditions, a monopolist can further increase profits by charging higher prices in markets with less elastic demand.
 ]
 
@@ -221,7 +221,7 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 
 .right-column[
 - Auctions is a structured framework for bidding, using clearly defined rules.
-- An ascending bid auction, better known as the 'English auction' is one of the most common types of auctions. The auction starts at some reservation price, and is complete once no-one is willing to bid higher than the most recent bid. Such auction, typically, leads to over-bidding - a phenomenon referred to as the 'winner's curse.'
+- An ascending bid auction, better known as the 'English auction' is one of the most common types of auctions. The auction starts at some reservation price, and is complete once no-one is willing to bid higher than the most recent bid. Such auction, typically, leads to over-bidding&mdash;a phenomenon referred to as the 'winner's curse.'
 ]
 
 ---
@@ -272,6 +272,11 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 
 # Readings
 
-Tomek & Kaiser, Chapters 5 and 11
+.pull-left[
+![](Art/readings.png)
+]
 
+.pull-right[
+Tomek & Kaiser, Chapters 5 and 11
+]
 

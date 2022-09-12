@@ -18,9 +18,16 @@ header-includes:
   - \usepackage{pgfplots}
 ---
 
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.width = 11, fig.height = 7)
+```
+
+
+```{r echo=FALSE, include=FALSE, message=FALSE}
+library(ggplot2)
+library(data.table)
+library(cowplot)
+library(forecast)
 ```
 
 # Price Behavior Over Time
@@ -65,6 +72,27 @@ knitr::opts_chunk$set(echo = FALSE)
 - Commodity prices may exhibit time-specific shifts in price levels.
 - A continuum of such shifts result in price trends. 
 - Trends usually are presented by persistent upward (or downward) movements in prices over a reasonably long period of time. 
+]
+
+---
+
+
+
+
+# Trends and Shifts in Prices
+
+.right-column[
+```{r maize, echo=FALSE, message=FALSE, cache=FALSE}
+dt <- fread("Data/CMO-Historical-Data-Monthly.csv")
+
+dt$DATE <- as.Date(dt$DATE,format="%d/%m/%Y")
+
+ggplot(dt,aes(x=DATE,y=MAIZE))+
+  geom_line(color="indianred",size=.8)+
+  labs(x="Year",y="Maize Price (US$/MT)",caption="retrieved from the World Bank 'Pink Sheet' Data\nhttps://www.worldbank.org/en/research/commodity-markets")+
+  theme_classic()+
+  theme(axis.title = element_text(size=22),axis.text = element_text(size=18))
+```
 ]
 
 ---

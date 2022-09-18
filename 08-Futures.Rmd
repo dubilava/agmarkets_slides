@@ -1,20 +1,25 @@
 ---
 title: "Agricultural Markets"
-subtitle: "Lecture 6: Storage and Futures Markets"
+subtitle: "Lecture 8: Futures Markets"
 author: "David Ubilava"
 date: "University of Sydney"
 output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    includes:
+      after_body: insert-logo.html
     nature:
       highlightStyle: github
       countIncrementalSlides: false
+      ratio: '16:9'
+header-includes: 
+  - \usepackage{tikz}
+  - \usepackage{pgfplots}
 ---
 
-
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.width = 11, fig.height = 7)
 ```
 
 
@@ -24,111 +29,111 @@ library(cowplot)
 library(data.table)
 ```
 
-# Intertemporal Arbitrage
-
-- For an annually produced storable commodity (e.g., grains), supply is given by the production in the current period, plus the beginning inventory (i.e., the leftover stocks from previous marketing year), and minus the ending inventory. 
-- The decision about the inventory storage depends on the relationship of the expected price of the commodity relative to its current price. 
-- The driving force in the relationship between current and expected prices is *intertemporal arbitrage*. 
-
----
-
-
-# Intertemporal Arbitrage
-
-- Mathematically, intertemporal arbitrage is given by the following equilibrium condition: $$E\left(p_{t+1}|\Omega_t\right)-p_{t} = s_t,$$ where $s_t$ is the marginal cost of storage between periods $t$ and $t+1$. That is, for any fixed period of storage, difference between the expected future price and the current price of a commodity must exactly equal the marginal cost of storage for that time interval.
-
----
-
-
-# Intertemporal Arbitrage
-
-- This equilibrium condition is referred to as the law of one price in a temporal context. 
-- If, for example, the expected price exceeds the current price by more than the cost of storage, an incentive exists to store a larger amount of inventory for future use. This, in turn, will have the effect of raising the current price and reducing the expected price. The process will continue until the equilibrium condition is met.
-
----
-
 
 # Futures Contracts
-	
+
+.pull-left[
+![](Art/futures.png)
+]
+
+.pull-right[	
 - Futures markets provide a venue for trade of *futures contracts*. 
-- A futures contract is a legal instrument, enforceable by the rules of the exchange on which it is traded, to deliver or accept delivery of a specific amount of a commodity during a specified month at a price established in the market.
+- A futures contract is a legal instrument, enforceable by the rules of the exchange on which it is traded, to deliver or accept delivery of a specific amount of a commodity during a specified month at a price established in the futures market.
+]
 
 ---
 
 
 # Futures Contracts
 
-- Futures contracts are a highly standardized form of forward contracts: 
+.right-column[
+- Futures contracts are a standardized form of forward contracts: 
   * that trade on an organized exchange platform (e.g., Chicago Board of Trade, Australian Securities Exchange); 
   * that specify a product, delivery date, delivery mechanism, and exchange price; 
-  * wherein payments (to and from) are backed by the exchange; and 
-  * wherein the agreement is backed by a good-faith deposit, referred to as 'margin.'
+  * wherein the payments are backed by the exchange; and 
+  * wherein the agreement is backed by a good-faith deposit, also referred to as the 'margin.'
+]
 
 ---
 
 
-# Futures Contracts
+# Trading on Futures Markets
 
+.right-column[
 - A futures contract requires two parties: a seller and a buyer. 
 - The seller promises to deliver the designated quantity of a commodity in exchange of a fixed price. Selling a contract is also known as taking a *short position*. 
 - The buyer promises to receive a delivery of a specified quantity of a commodity for a fixed price. Buying a contract is also known as taking a *long position*.
+]
 
 ---
 
 
-# Futures Contracts
+# Trading on Futures Markets
 
+.right-column[
 - In practice, very few contracts are held until expiration (when the transfer of ownership would take place). Instead, parties offset their positions. 
   * If a trader sells a futures contract, they can offset by buying the same type of futures contract. 
   * If a trader buys a futures contract, they can offset by selling the same type of futures contract. 
 - When they offset, the contract obligations are fulfilled, and no longer exists the need to accept or make delivery of the product. The only remaining 'obligation' for sellers and buyers is any difference in the prices of the two contracts.
+]
 
 ---
 
 
 # Contango and Backwardation
 
+.right-column[
 - Futures contracts of agricultural commodities are traded for a specific set of delivery months - the contract months.
 - A forward curve represents a sequence of prices over the consecutive contract months.  
 - *Contango* and *backwardation* are the two terms that describe the structure of the forward curve.
+]
 
 ---
 
 # Contango and Backwardation
 
+.right-column[
 - When a market is in contango, the forward price of a futures contract is higher than the spot price. 
 - Physically delivered futures contracts may be in a contango because of fundamental factors like storage, financing, and insurance costs. 
+]
 
 ---
 
 # Contango and Backwardation
 
+.right-column[
 - When a market is in backwardation, the forward price of the futures contract is lower than the spot price. This is also referred to as *inverted* forward curve.
 - The futures forward curve may become inverted in physically-delivered contracts because there may be a benefit to owning the physical material, such as keeping a production process running (convenience yield). 
+]
 
 ---
 
 
 # Contango and Backwardation
 
+.right-column[
 - The futures prices can change over time as market participants change their views of the future expected spot price; so the forward curve changes and may move from contango to backwardation.
 - Over time, as the futures contract approaches maturity, the futures price will converge with the spot price, otherwise an arbitrage opportunity would exist.
+]
 
 ---
 
 
 # Inventories and Price of Storage
 
+.right-column[
 - Because spot and futures prices are determined simultaneously (and are influenced by the same set of explanatory variables), they are correlated, but their levels typically differ. 
-- The difference between spot and futures prices is referred to as the price of storage, which is the expected return from holding inventory. 
+- The difference between spot prices and futures prices can be seen as the *price of storage* that can be interpreted as the expected return from holding inventory. 
 - The relationship between the price of storage and the amount of inventory held can be illustrated by an upward-sloping *supply-of-storage* curve.
+]
 
 ---
 
 
 # Inventories and Price of Storage
 
-```{r storage, fig.cap='Supply-of-Storage', out.width='90%', fig.asp=0.6, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=TRUE}
+.right-column[
+```{r storage, out.width='90%', fig.asp=0.6, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=TRUE}
 
 x <- seq(-2,7,0.001)
 
@@ -149,16 +154,19 @@ ggplot(dt)+
   theme_classic()+
   theme(axis.title = element_text(size=16), axis.text.x = element_blank(), axis.text.y = element_text(size=10),axis.ticks = element_blank(),plot.margin = margin(1,0,0,0,"cm"), axis.line.x= element_blank())
 ```
+]
 
 ---
 
 
 # Inventories and Price of Storage
 
+.right-column[
 - The negative segment of the supply-of-storage curve implies positive inventories even when the return-on-storage is negative. 
 - This is due to the convenience yield: a benefit that accrues from having sufficient amount of stocks to maintain continuous business operation or to meet unexpected demands. 
 - Marginal convenience yield decreases and approaches zero as stocks increase. 
 - Marginal cost of storage remains constant up to a point, but may increase as inventories get large (storage capacity constraints).
+]
 
 ---
 
@@ -193,31 +201,42 @@ ggplot(dt)+
 
 # Futures Price Responses to Information
 
+.right-column[
 - Futures markets react to market information and are believed to offer the best prediction of future spot prices - the concept that leads to the *efficient market hypothesis*. 
 - In the perfect market, the prices for the various futures contracts will exactly anticipate the respective maturity months' spot prices: $$p_{f,t} = E\!\left(p_{s,t+1}|\Omega_t\right).$$ That is to say that futures market efficiently aggregates all the information that influences prices, and that futures prices are potentially unbiased forecasts of forthcoming spot prices.
+]
 
 ---
 
 
 # Futures Price Responses to Information
 
+.right-column[
 - The efficient market hypothesis relies on the following assumptions: 
   * information is available at no cost;
   * current price reflect all known information; 
   * new information (which occurs randomly) is reflected instantly (and correctly) onto a new price.
 - The efficient markets support the random walk model, given by: $$p_{f,t+1} = p_{f,t} + \varepsilon_{t+1},\;~~\varepsilon_{t+1}\sim iid\left(0,\sigma^2\right)$$
+]
 
 ---
 
 
 # Futures Price Responses to Information
 
+.right-column[
 - If markets are inefficient, i.e., if price changes do not fully reflect information changes, then past prices can facilitate economically significant forecasts: $$p_{f,t+1} = \beta_1 p_{f,t} + \beta_2 p_{f,t-1} + \ldots + \varepsilon_{t+1}.$$ 
 - This can happen, because not everyone has perfect information (semi-strong-form efficient vs. strong-form efficient), and moreover, even with perfect information, *bounded rationality* may result in sub-optimal decisions by market participants.
+]
 
 ---
 
 # Readings
 
-Tomek & Kaiser, Chapters 11 & 12
+.pull-left[
+![](Art/readings.png)
+]
 
+.pull-right[
+Tomek & Kaiser, Chapters 11 & 12
+]

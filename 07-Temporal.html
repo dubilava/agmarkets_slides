@@ -127,6 +127,62 @@ class: center, middle, inverse, title-slide
 ---
 
 
+# Price Cycles and the Cobweb Model
+
+.right-column[
+- A cycle is a pattern that repeats itself over a time period that is longer than one year. The simplest variant of a price cycle has a fixed period, but such cycles are rare. 
+- Cycle-like behavior of prices is typically initiated by an external event (say, a drought). Such events manifest irregularly and with varying intensity, which play role in patterns of price cycles. 
+- Moreover, due to the very nature of production process, the cycles may be asymmetric - i.e., a positive shock of a given magnitude may result in dynamics that is different from dynamics due to a negative shock of the same magnitude.
+]
+
+---
+
+
+# Price Cycles and the Cobweb Model
+
+.right-column[
+- Two factors facilitate cyclical behavior in commodity prices:
+  * the way expectations are formed, and 
+  * the costs associated with responding to changed expectations. 
+- Due to the production lag, profit-maximizing decisions rely on expected (rather than actual) prices.
+]
+
+---
+
+
+# Price Cycles and the Cobweb Model
+
+.right-column[
+- To illustrate the point, consider a case of *naive expectations*: `$$p_{t+1}^{*} = p_{t},$$` where `\(p_{t+1}^{*}\)` denotes the expected price for period `\(t+1\)`, which is equal to an observed price in period `\(t\)`. In addition, assume a competitive market (producers are price-takers), a market clearing price adjustment, and a static supply and demand. 
+
+]
+
+---
+
+
+# Price Cycles and the Cobweb Model
+
+.pull-left[
+- Under the foregoing assumptions, a (one-off) shock to the market will result in a price (and quantity) cycles that will gradually dissolve. 
+]
+
+.pull-right[
+&lt;img src="07-Temporal_files/figure-html/cobweb-1.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+
+# Price Cycles and the Cobweb Model
+
+.right-column[
+- Somewhat more 'sophisticated' models assume some form of *adaptive expectations*. Such models incorporate multiple lags of prices (i.e., `\(p_{t-1},p_{t-2},\dots\)`) in forming the expected price of a commodity. 
+- The expected price then can be a weighted average of current and past prices, e.g., a prediction from an autoregressive process. To that end, the naive expectations is a special case of the adaptive expectations.
+]
+
+---
+
+
 # Seasonality of Prices
 
 .right-column[
@@ -183,64 +239,37 @@ class: center, middle, inverse, title-slide
 
 ---
 
-
-# Price Cycles and the Cobweb Model
-
-.right-column[
-- A cycle is a pattern that repeats itself over a time period that is longer than one year. The simplest variant of a price cycle has a fixed period, but such cycles are rare. 
-- Cycle-like behavior of prices is typically initiated by an external event (say, a drought). Such events manifest irregularly and with varying intensity, which play role in patterns of price cycles. 
-- Moreover, due to the very nature of production process, the cycles may be asymmetric - i.e., a positive shock of a given magnitude may result in dynamics that is different from dynamics due to a negative shock of the same magnitude.
-]
-
----
-
-
-# Price Cycles and the Cobweb Model
+# Intertemporal Arbitrage
 
 .right-column[
-- Two factors facilitate cyclical behavior in commodity prices:
-  * the way expectations are formed, and 
-  * the costs associated with responding to changed expectations. 
-- Due to the production lag, profit-maximizing decisions rely on expected (rather than actual) prices.
+- For an annually produced storable commodity (e.g., grains), supply is given by the production in the current period, plus the beginning inventory (i.e., the leftover stocks from previous marketing year), and minus the ending inventory. 
+- The decision about the inventory storage depends on the relationship of the expected price of the commodity relative to its current price. 
+- The driving force in the relationship between current and expected prices is *intertemporal arbitrage*. 
 ]
 
 ---
 
 
-# Price Cycles and the Cobweb Model
+# Intertemporal Arbitrage
 
 .right-column[
-- To illustrate the point, consider a case of *naive expectations*: `$$p_{t+1}^{*} = p_{t},$$` where `\(p_{t+1}^{*}\)` denotes the expected price for period `\(t+1\)`, which is equal to an observed price in period `\(t\)`. In addition, assume a competitive market (producers are price-takers), a market clearing price adjustment, and a static supply and demand. 
-
+- Mathematically, intertemporal arbitrage is given by the following equilibrium condition: `$$E\left(p_{t+1}|\Omega_t\right)-p_{t} = s_t,$$` where `\(s_t\)` is the marginal cost of storage between periods `\(t\)` and `\(t+1\)`. That is, for any fixed period of storage, difference between the expected future price and the current price of a commodity must exactly equal the marginal cost of storage for that time interval.
 ]
 
 ---
 
 
-# Price Cycles and the Cobweb Model
-
-.pull-left[
-- Under the foregoing assumptions, a (one-off) shock to the market will result in a price (and quantity) cycles that will gradually dissolve. 
-]
-
-.pull-right[
-&lt;img src="07-Temporal_files/figure-html/cobweb-1.png" width="90%" style="display: block; margin: auto;" /&gt;
-]
-
----
-
-
-# Price Cycles and the Cobweb Model
+# Intertemporal Arbitrage
 
 .right-column[
-- Somewhat more 'sophisticated' models assume some form of *adaptive expectations*. Such models incorporate multiple lags of prices (i.e., `\(p_{t-1},p_{t-2},\dots\)`) in forming the expected price of a commodity. 
-- The expected price then can be a weighted average of current and past prices, e.g., a prediction from an autoregressive process. To that end, the naive expectations is a special case of the adaptive expectations.
+- This equilibrium condition is referred to as the law of one price in a temporal context. 
+- If, for example, the expected price exceeds the current price by more than the cost of storage, an incentive exists to store a larger amount of inventory for future use. This, in turn, will have the effect of raising the current price and reducing the expected price. The process will continue until the equilibrium condition is met.
 ]
 
 ---
+
 
 # Readings
-
 
 .pull-left[
 ![](Art/readings.png)

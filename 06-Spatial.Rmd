@@ -304,4 +304,6 @@ plot_grid(gg1,ggi,gg2,align="v",nrow=1,hjust=0)
 Tomek & Kaiser, Chapter 8
 
 Norton, Alwang & Masters, Chapter 16
+
+Barrett, C. B., & Li, J. R. (2002). Distinguishing between equilibrium and integration in spatial price analysis. *American Journal of Agricultural Economics 84*(2), 292-307.
 ]

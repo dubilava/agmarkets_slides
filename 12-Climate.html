@@ -1,29 +1,37 @@
----
-title: "Agricultural Markets"
-subtitle: "Lecture 12: Climate and Agriculture"
-author: "David Ubilava"
-date: "University of Sydney"
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts, style.css]
-    lib_dir: libs
-    includes:
-      after_body: insert-logo.html
-    nature:
-      highlightStyle: github
-      countIncrementalSlides: false
-      ratio: '16:9'
-header-includes: 
-  - \usepackage{tikz}
-  - \usepackage{pgfplots}
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Agricultural Markets</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="David Ubilava" />
+    <script src="libs/header-attrs-2.17/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Agricultural Markets
+]
+.subtitle[
+## Lecture 12: Climate and Agriculture
+]
+.author[
+### David Ubilava
+]
+.date[
+### University of Sydney
+]
+
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-library(ggplot2)
-library(knitr)
-```
+
+
 
 
 
@@ -45,9 +53,7 @@ library(knitr)
 # GHG emissions
 
 .right-column[
-```{r supply-chain, echo=FALSE, fig.align='left', out.width = '80%'}
-knitr::include_graphics("Figures/food-emissions-supply-chain.png")
-```
+&lt;img src="Figures/food-emissions-supply-chain.png" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -56,25 +62,9 @@ knitr::include_graphics("Figures/food-emissions-supply-chain.png")
 # Feedback loop
 
 .right-column[
-A feedback loop is where $X$ causes $Y$ which either reinforces $X$ (positive feedback) or stabilizes $X$ (negative feedback).
+A feedback loop is where `\(X\)` causes `\(Y\)` which either reinforces `\(X\)` (positive feedback) or stabilizes `\(X\)` (negative feedback).
 
-```{tikz, echo=FALSE, fig.align="center"}
-
-\usetikzlibrary{shapes.geometric,arrows,positioning}
-
-\begin{tikzpicture}[node distance=1cm, auto,text width=4em,text centered]
- \node (e) {Effect};
- \node[below=0.85cm of e] (f) {Feedback};
- \node[above=0.02cm of f,red] (p) {+};
- \node[below=0.02cm of f,blue] (m) {--};
- \node[left=0.5cm of e] (g) {GHG}
-   edge[->] (e.west)
-   edge[<-,bend right=20] (f.west);
- \node[right=0.5cm of e] (o) {Outcome}
-   edge[<-] (e.east)
-   edge[->,bend left=20] (f.east);
-\end{tikzpicture}
-```
+&lt;img src="12-Climate_files/figure-html/unnamed-chunk-1-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -105,9 +95,7 @@ A feedback loop is where $X$ causes $Y$ which either reinforces $X$ (positive fe
 # Global warming: Observed
 
 .right-column[
-```{r temperature, echo=FALSE, fig.align='left', out.width='80%'}
-knitr::include_graphics("Figures/temperature-anomaly.png")
-```
+&lt;img src="Figures/temperature-anomaly.png" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -116,9 +104,7 @@ knitr::include_graphics("Figures/temperature-anomaly.png")
 # Global warming: Scenarios
 
 .right-column[
-```{r scenarios, echo=FALSE, fig.align='left', out.width = '80%'}
-knitr::include_graphics("Figures/Greenhouse-gas-emission-scenarios-01.png")
-```
+&lt;img src="Figures/Greenhouse-gas-emission-scenarios-01.png" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
 ]
 
 ---
@@ -162,11 +148,11 @@ knitr::include_graphics("Figures/Greenhouse-gas-emission-scenarios-01.png")
 # Estimating the effect of climate change
 
 .right-column[
-- **Model-based**&mdash;obtain parameters (lab/field experiments), and simulate economic outcomes under different climate change
+- **Model-based**&amp;mdash;obtain parameters (lab/field experiments), and simulate economic outcomes under different climate change
 scenarios
   * Advantage: out-of-sample simulations
   * Disadvantage: heavily driven by parameters used
-- **Data-driven**&mdash;estimate historical relationship between weather and economic outcome, and project the relationship under different climate change scenarios
+- **Data-driven**&amp;mdash;estimate historical relationship between weather and economic outcome, and project the relationship under different climate change scenarios
   * Advantage: evidence-based
   * Disadvantage: lack of external validity
 ]
@@ -176,11 +162,11 @@ scenarios
 # Estimating the effect of climate change
 
 .right-column[
-- **Cross-sectional** data analysis&mdash;comparing across locations in a given time period:
+- **Cross-sectional** data analysis&amp;mdash;comparing across locations in a given time period:
   * Useful for estimating effect of climate;
   * Source of variation is differences in climate across locations;
   * Should capture adaptation, but may result in biased estimates.
-- **Time series** data analysis&mdash;comparing over time in a given location:
+- **Time series** data analysis&amp;mdash;comparing over time in a given location:
   * Useful for estimating effect of weather;
   * Source of variation is differences in weather over time;
   * Relatively unbiased, but may not capture adaptation.
@@ -279,5 +265,151 @@ and manage their existing woodlands to contribute to carbon retention.
 ]
 
 .pull-right[
-Norton, Alwang & Masters, Chapter 9
+Norton, Alwang &amp; Masters, Chapter 9
 ]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+<style>
+.logo {
+  background-image: url(agmarkets-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: .5em;
+  left: 2em;
+  width: 91px;
+  height: 105px;
+  z-index: 0;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

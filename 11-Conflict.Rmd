@@ -1,6 +1,6 @@
 ---
 title: "Agricultural Markets"
-subtitle: "Lecture 11: Agricultural Markets and Conflict"
+subtitle: "Lecture 11: Conflict and Agriculture"
 author: "David Ubilava"
 date: "University of Sydney"
 output:

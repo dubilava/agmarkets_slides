@@ -24,7 +24,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Turbulence in agricultural markets
 
-.right-column[
+.pull-left[
+![](Art/intro.png)
+]
+
+.pull-right[
 Much has been said and written about soaring prices of wheat and its repercussions from March 2022 onward. 
 
 The observed sharp price increase was of historical proportions, which happened shortly after Russia invaded Ukraine in February of 2022.

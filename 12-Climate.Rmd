@@ -27,10 +27,10 @@ library(knitr)
 
 
 
-# Greenhouse gas emissions and agriculture
+# GHG emissions and global warming
 
 .pull-left[
-![](Figures/Emissions-by-sector-–-pie-charts.png)
+![](Art/climate.png)
 ]
 .pull-right[
 - People, through their consumption and production decisions, facilitate Greenhouse Gas (GHG) emissions.
@@ -42,7 +42,18 @@ library(knitr)
 ---
 
 
-# GHG emissions
+# GHG emissions by sector
+
+.right-column[
+```{r by-sector, echo=FALSE, fig.align='left', out.width = '60%'}
+knitr::include_graphics("Figures/Emissions-by-sector-–-pie-charts.png")
+```
+]
+
+---
+
+
+# GHG emissions and agriculture
 
 .right-column[
 ```{r supply-chain, echo=FALSE, fig.align='left', out.width = '80%'}

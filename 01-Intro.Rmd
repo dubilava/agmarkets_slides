@@ -29,28 +29,29 @@ knitr::opts_chunk$set(echo = FALSE)
 ]
 
 .pull-right[
-Much has been said and written about soaring prices of wheat and its repercussions from March 2022 onward. 
+Agricultural markets are globally integrated. A shock in one region has repercussions for all other regions.
 
-The observed sharp price increase was of historical proportions, which happened shortly after Russia invaded Ukraine in February of 2022.
+A case in point in the sharp increase in prices of wheat and other staple commodities when Russia invaded Ukraine in February of 2022.
 ]
 
 ---
 
-# Wheat futures in the wake of the war
+# Wheat futures during the war and agreements
 
 .pull-left[
 - Wheat prices surged at the onset of the war.
-- The 70% increase was of historical proportions.
-- War-induced market disruption and the sanctions that followed were both at play for this price surge.
+- War-induced market disruption and the sanctions that followed were both at play.
+- The agreement on "grain corridor" reverted prices to the pre-war levels.
 ]
 
 .pull-right[
-![Export Levels](wheat_futures.png)
+![Export Levels](figures/wheat.png)
 ]
 
 ---
 
-# Wheat exports from the Breadbasket of Europe  
+
+# Trends in wheat exports  
 
 .pull-left[
 - Russia and Ukraine account for more than a quarter of world wheat exports. 
@@ -58,10 +59,25 @@ The observed sharp price increase was of historical proportions, which happened 
 ]
 
 .pull-right[
-![Export Levels](export_levels.png)
+![Export Levels](figures/exports.png)
 ]
 
 ---
+
+
+# Trends in wheat production  
+
+.pull-left[
+- Russia's and Ukraine's share in world wheat production is smaller but still substantial. 
+- China and India are notable producers as well as consumers of wheat.
+]
+
+.pull-right[
+![Export Levels](figures/production.png)
+]
+
+---
+
 
 
 # Cereal price spikes in recent history

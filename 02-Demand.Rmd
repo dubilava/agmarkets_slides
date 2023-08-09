@@ -141,7 +141,7 @@ plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"
 - Changes to prices affect a consumer's decision-making. 
 - A consumer can afford and, thus, will purchase more of the same good as the price of the good drops. 
 - This is known as the *substitution effect*. 
-- The substitution effect is always related to the price change.
+- The substitution effect is always inversely related to the price change.
 ]
 
 ---

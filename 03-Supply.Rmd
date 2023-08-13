@@ -38,10 +38,10 @@ library(geomtextpath)
 ---
 
 
-# Firms maximize profit
+# Production function
 
 .right-column[
-- A firm's output is related to the inputs through a production function: $$q = q(\mathbf{z})$$
+- A firm's output is related to inputs via a production function: $$q = q(\mathbf{z})$$
 - We can, thus, rewrite he profit function as: $$\pi = pq(\mathbf{z})-\mathbf{w}'\mathbf{z}.$$ 
 - We can use this equation to derive a producer's supply function of output and demand functions for inputs. 
 <!-- The relevant supply function depends on the form of the production function, hence the form of the cost functions. -->
@@ -63,7 +63,7 @@ library(geomtextpath)
 ---
 
 
-# Marginal product of input
+# The optimal amount of input
 
 .right-column[
 - The optimum level of factor use is at the point where the $MP_i$ multiplied by price of output, $p$, just equals to the unit cost of input, $w_i$, which yields the following relationship:$$\frac{\partial q}{\partial z_i} = \frac{w_i}{p}$$
@@ -127,7 +127,7 @@ gg
 ---
 
 
-# Economies of scale
+# A measure of economies of scale
 
 .right-column[
 - A measure of economies of scale, $s$, is the average total cost to marginal cost ratio, which is equivalent to the total cost elasticity of output: $$s=\frac{AC(q)}{MC(q)} \equiv \frac{\partial q}{\partial C(q)} \frac{C(q)}{q}$$
@@ -137,7 +137,7 @@ gg
 ---
 
 
-# Market Supply
+# Market supply
 
 .right-column[
 - Market supply is a (horizontal) sum of firm's supply curves. 
@@ -147,7 +147,7 @@ gg
 ---
 
 
-# Market Supply
+# The supply mover and shifters
 
 .right-column[
 - Own price of a good is a sole factor affecting the quantity supplied resulting in the movement along the supply curve. 
@@ -164,7 +164,7 @@ gg
 ---
 
 
-# Supply Elasticity
+# Supply elasticity
 
 .right-column[
 - The responsiveness of the supply to price changes is known as *price elasticity of supply* (supply elasticity). 
@@ -174,7 +174,7 @@ gg
 ---
 
 
-# Supply Elasticity
+# Supply elasticity
 
 .right-column[
 - Supply elasticities can be categorized as:
@@ -188,7 +188,7 @@ gg
 ---
 
 
-# Supply Elasticity
+# Supply elasticity
 
 .right-column[
 - Assuming a linear supply curve, as quantity and price increase (i.e., as we move upwards along the supply curve) the price elasticity of supply converges to $1$. 

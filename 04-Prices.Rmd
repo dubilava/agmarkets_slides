@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    includes:
+      after_body: insert-logo.html
     nature:
       highlightStyle: github
       countIncrementalSlides: false

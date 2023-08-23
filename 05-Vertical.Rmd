@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    includes:
+      after_body: insert-logo.html
     nature:
       highlightStyle: github
       countIncrementalSlides: false
@@ -26,7 +28,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ]
 
 .pull-right[
-- When we enjoy a pizza at a restaurant, or an oven roasted chicken at home, rarely we contemplate about the chain of events&mdash;a system, and actions of people involved in this system&mdash;that has culminated into the meal in front of us. 
+- When we enjoy a pizza at a restaurant, or an oven roasted chicken at home, rarely we contemplate about the chain of events&mdash;a system, and actions of people involved therein&mdash;that has led to the meal in front of us. 
 
 - This *agricultural marketing system*, also known as the *food system*, links producers with consumers by transforming an agricultural commodity into a food product. 
 ]

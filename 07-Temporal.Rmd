@@ -82,16 +82,16 @@ library(forecast)
 # Trends and Shifts in Prices
 
 .right-column[
-```{r maize, echo=FALSE, message=FALSE, cache=FALSE}
+```{r maize, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE}
 dt <- fread("Data/CMO-Historical-Data-Monthly.csv")
 
 dt$DATE <- as.Date(dt$DATE,format="%d/%m/%Y")
 
 ggplot(dt,aes(x=DATE,y=MAIZE))+
-  geom_line(color="indianred",size=.8)+
+  geom_line(color="indianred",linewidth=.8)+
   labs(x="Year",y="Maize Price (US$/MT)",caption="retrieved from the World Bank 'Pink Sheet' Data\nhttps://www.worldbank.org/en/research/commodity-markets")+
   theme_classic()+
-  theme(axis.title = element_text(size=22),axis.text = element_text(size=18))
+  theme(axis.title=element_text(size=22),axis.text = element_text(size=18),plot.caption=element_text(size=16,color="dimgray"))
 ```
 ]
 
@@ -285,7 +285,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 # Intertemporal Arbitrage
 
 .right-column[
-- Mathematically, intertemporal arbitrage is given by the following equilibrium condition: $$E\left(p_{t+1}|\Omega_t\right)-p_{t} = s_t,$$ where $s_t$ is the marginal cost of storage between periods $t$ and $t+1$. That is, for any fixed period of storage, difference between the expected future price and the current price of a commodity must exactly equal the marginal cost of storage for that time interval.
+- Mathematically, intertemporal arbitrage is given by the following equilibrium condition: $$E\left(p_{t+1}|\Omega_t\right)-p_{t} = s_t,$$ where $s_t$ is the marginal cost of storage between periods $t$ and $t+1$. That is, for any fixed period of storage, difference between the expected future price and the current price of a commodity must equal the marginal cost of storage for that time interval.
 ]
 
 ---

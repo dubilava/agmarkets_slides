@@ -11,3 +11,5 @@ Below are the links to the lecture slides for the unit on agricultural markets.
 [Lecture 5: Marketing System and Margins](https://davidubilava.com/agmarkets_slides/05-Vertical.html)
 
 [Lecture 6: Market Integration and Trade](https://davidubilava.com/agmarkets_slides/06-Spatial.html)
+
+[Lecture 7: Storage and Price Dynamics](https://davidubilava.com/agmarkets_slides/07-Temporal.html)

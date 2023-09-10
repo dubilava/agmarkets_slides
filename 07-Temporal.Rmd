@@ -30,7 +30,7 @@ library(cowplot)
 library(forecast)
 ```
 
-# Price Behavior Over Time
+# Prices change over time
 
 .pull-left[
 ![](Art/temporal.png)
@@ -46,27 +46,29 @@ library(forecast)
 ---
 
 
-# Price Behavior Over Time
-
-.right-column[
-- These changes may result in trends, seasonality, and cycles in the commodity prices dynamics. 
-- A commodity price series may exhibit one or several of these features (e.g., seasonality is a likely feature of annually harvested agricultural commodity prices; prices of meat typically follow a cyclical pattern, etc.).
-]
-
----
-
-
-# Price Behavior Over Time
+# Price changes can have a specific pattern
 
 .right-column[
 - Changes in the underlying factors of a commodity price behavior may result in shifts and switches of the commodity price trends, or altered seasonal or cyclical patterns. 
-  * e.g., previously perishable products&mdash;such as meat, eggs, butter&mdash;became 'storable' with the invention of refrigeration, which also impacted the price dynamics of these agricultural commodities. 
+  * e.g., previously perishable products&mdash;such as meat, eggs, butter&mdash;became 'storable' with the invention of refrigeration, which also impacted their price dynamics. 
 ]
 
 ---
 
 
-# Trends and Shifts in Prices
+# The patterns are trends, cycles, and seasonality
+
+.right-column[
+- These changes may result in trends, cycles, and seasonal behavior of the commodity price series. 
+- Commodity price series may exhibit one or more of these features
+  * e.g., seasonality is a likely feature of annually harvested agricultural commodity prices;
+  * prices of meat typically follow a cyclical pattern, etc.
+]
+
+---
+
+
+# Trends and shifts in prices
 
 .right-column[
 - Commodity prices may exhibit time-specific shifts in price levels.
@@ -79,7 +81,7 @@ library(forecast)
 
 
 
-# Trends and Shifts in Prices
+# U.S. maize price dynamics
 
 .right-column[
 ```{r maize, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE}
@@ -98,7 +100,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Trends and Shifts in Prices
+# What results in price trends?
 
 .right-column[
 - Recall that observed prices are equilibrium market prices, governed by supply and demand schedules. 
@@ -109,7 +111,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Trends and Shifts in Prices
+# Some examples for agricultural price trends
 
 .right-column[
 - For agricultural commodities, a major factor in year-to-year price variability is change in annual supply. 
@@ -120,7 +122,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Trends and Shifts in Prices
+# Some examples for agricultural price shifts
 
 .right-column[
 - In contrast to somewhat stable year-to-year changes, there are occasions when price levels shift to (and remain at) a new level. 
@@ -132,7 +134,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Price Cycles and the Cobweb Model
+# Agricultural commodity price cycles
 
 .right-column[
 - A cycle is a pattern that repeats itself over a time period that is longer than one year. The simplest variant of a price cycle has a fixed period, but such cycles are rare. 
@@ -143,7 +145,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Price Cycles and the Cobweb Model
+# What results in  price cycles?
 
 .right-column[
 - Two factors facilitate cyclical behavior in commodity prices:
@@ -155,7 +157,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Price Cycles and the Cobweb Model
+# Price cycles and the cobweb Mmodel
 
 .right-column[
 - To illustrate the point, consider a case of *naive expectations*: $$p_{t+1}^{*} = p_{t},$$ where $p_{t+1}^{*}$ denotes the expected price for period $t+1$, which is equal to an observed price in period $t$. In addition, assume a competitive market (producers are price-takers), a market clearing price adjustment, and a static supply and demand. 
@@ -165,7 +167,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Price Cycles and the Cobweb Model
+# The cobweb model: An illustration
 
 .pull-left[
 - Under the foregoing assumptions, a (one-off) shock to the market will result in a price (and quantity) cycles that will gradually dissolve. 
@@ -195,7 +197,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Price Cycles and the Cobweb Model
+# Adaptive expectations and lag dependence
 
 .right-column[
 - Somewhat more 'sophisticated' models assume some form of *adaptive expectations*. Such models incorporate multiple lags of prices (i.e., $p_{t-1},p_{t-2},\dots$) in forming the expected price of a commodity. 
@@ -205,7 +207,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Seasonality of Prices
+# Seasonality of food and agricultural prices
 
 .right-column[
 - Seasonal price behavior is a systematic pattern that occurs within a year, and repeats across the years. 
@@ -216,7 +218,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Seasonality of Prices
+# Seasonality of annually harvested crop prices
 
 .pull-left[
 - Assuming an annually produced storable commodity, and a perfectly competitive market, prices will be lowest just after the harvest, and rise at the rate of *cost of storage* per unit of time.
@@ -239,7 +241,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Seasonality of Prices
+# Different seasons &ndash; different seasonalities 
 
 .right-column[
 - The typical seasonal price pattern does not prevail each year. Prices may rise by more than the cost of storage, or they may even decline over the season. 
@@ -249,7 +251,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Seasonality of Prices
+# Cost of storage
 
 .right-column[
 - The storage costs within a year&mdash;implicitly depicted in the seasonal pattern of prices&mdash;can be divided into the four components: 
@@ -262,7 +264,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Seasonality of Prices
+# Seasonality of price fluctuation
 
 .right-column[
 - As the storage season (or the marketing year) progresses, not only prices increase, but they also become more volatile. That is, the price volatility immediately after harvest is smaller than the price volatility during the months later in the marketing year. 
@@ -271,7 +273,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 
 ---
 
-# Intertemporal Arbitrage
+# Commodity prices, costs, and seasonality
 
 .right-column[
 - For an annually produced storable commodity (e.g., grains), supply is given by the production in the current period, plus the beginning inventory (i.e., the leftover stocks from previous marketing year), and minus the ending inventory. 
@@ -282,7 +284,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Intertemporal Arbitrage
+# Intertemporal arbitrage
 
 .right-column[
 - Mathematically, intertemporal arbitrage is given by the following equilibrium condition: $$E\left(p_{t+1}|\Omega_t\right)-p_{t} = s_t,$$ where $s_t$ is the marginal cost of storage between periods $t$ and $t+1$. That is, for any fixed period of storage, difference between the expected future price and the current price of a commodity must equal the marginal cost of storage for that time interval.
@@ -291,11 +293,22 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ---
 
 
-# Intertemporal Arbitrage
+# The law of one price (over time)
 
 .right-column[
 - This equilibrium condition is referred to as the law of one price in a temporal context. 
 - If, for example, the expected price exceeds the current price by more than the cost of storage, an incentive exists to store a larger amount of inventory for future use. This, in turn, will have the effect of raising the current price and reducing the expected price. The process will continue until the equilibrium condition is met.
+]
+
+---
+
+
+# The lack of the seasonality in developing countries
+
+.right-column[
+- While typically well-featured in developed countries, the expected seasonal pattern for annually harvested crops appears to be largely absent in developing countries.
+- The lean season price fails to rise above the harvest season price 16.3% of the time on average (Cardell & Michelson, 2023).
+- Aversion to the potential negative returns may tempt farmers to opt for the harvest-time sale of their crop.
 ]
 
 ---
@@ -309,4 +322,6 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 
 .pull-right[
 Tomek & Kaiser, Chapter 9
+
+Cardell & Michelson (2023). [Price risk and small farmer maize storage in Sub-Saharan Africa: New insights into a long-standing puzzle](https://doi.org/10.1111/ajae.12343). *American Journal of Agricultural Economics, 105*(3): 737-759.
 ]

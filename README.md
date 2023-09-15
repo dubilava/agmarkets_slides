@@ -13,3 +13,5 @@ Below are the links to the lecture slides for the unit on agricultural markets.
 [Lecture 6: Market Integration and Trade](https://davidubilava.com/agmarkets_slides/06-Spatial.html)
 
 [Lecture 7: Storage and Price Dynamics](https://davidubilava.com/agmarkets_slides/07-Temporal.html)
+
+[Lecture 8: Futures Markets and Prices](https://davidubilava.com/agmarkets_slides/08-Futures.html)

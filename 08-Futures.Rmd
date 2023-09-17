@@ -238,5 +238,5 @@ ggplot(dt)+
 ]
 
 .pull-right[
-Tomek & Kaiser, Chapters 11 & 12
+Tomek & Kaiser, Chapter 12
 ]

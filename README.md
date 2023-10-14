@@ -15,3 +15,10 @@ Below are the links to the lecture slides for the unit on agricultural markets.
 [Lecture 7: Storage and Price Dynamics](https://davidubilava.com/agmarkets_slides/07-Temporal.html)
 
 [Lecture 8: Futures Markets and Prices](https://davidubilava.com/agmarkets_slides/08-Futures.html)
+
+[Lecture 9: Risk and Insurance](https://davidubilava.com/agmarkets_slides/09-Risk.html)
+
+[Lecture 10: International Negotiations and Trade Policy](https://davidubilava.com/agmarkets_slides/10-TradePolicy.html)
+
+
+

@@ -261,7 +261,7 @@ knitr::opts_chunk$set(echo = FALSE)
 .pull-right[
 Tomek & Kaiser, Chapter 8
 
-Norton, Alwang & Masters, Chapter 17
+Norton, Alwang & Masters, Chapters 16 & 17
 
 Martin, W., & Messerlin, P. (2007). Why is it so difficult? Trade liberalization under the Doha Agenda. *Oxford Review of Economic Policy 23*(3), 347-366.
 ]

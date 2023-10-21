@@ -76,7 +76,7 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 .right-column[
 - The opportunity cost mechanism relies on a theory that an individual gets to choose between 'farming' and 'fighting.'
 - When agricultural commodity prices are high, farming should be the preferred mode of 'employment,' as fighting presents risks to once life, and, after all, it is illegal.
-- When prices drop, returns from fighting will outweigh the income from farming, and individuals will choose to engage in unlawful activities (e.g., [Dube and vargas, 2013](https://academic.oup.com/restud/article/80/4/1384/1579342)).
+- When prices drop, returns from fighting will outweigh the income from farming, and individuals will choose to engage in unlawful activities (e.g., [Dube and Vargas, 2013](https://academic.oup.com/restud/article/80/4/1384/1579342)).
 ]
 
 ---
@@ -86,7 +86,7 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 
 .right-column[
 - The rapacity mechanism relies on a theory that increase in income facilitates conflict and violence as the mean and the consequence of appropriating wealth.
-- Thus, when agricultural commodity prices are high, farmers accumulate wealth, which attracts perpetrators (e.g., [McGuirk and Burke, 2020](https://www.journals.uchicago.edu/doi/full/10.1086/709993)).
+- When agricultural commodity prices rise, farmers accumulate wealth, which attracts perpetrators (e.g., [McGuirk and Burke, 2020](https://www.journals.uchicago.edu/doi/full/10.1086/709993)).
 ]
 
 ---
@@ -138,44 +138,11 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 ---
 
 
-# Main data
-
-.right-column[
-- Conflict data from the ACLED Project ([Raleigh et al., 2010](https://journals.sagepub.com/doi/abs/10.1177/0022343310378914)), available at [https://acleddata.com/](https://acleddata.com/).
-- Price data from the International Monetary Fund's online portal for Primary Commodity Prices, available at [https://www.imf.org/en/Research/commodity-prices](https://www.imf.org/en/Research/commodity-prices).
-- Crop harvest data from the Center for Sustainability and the Global Environment, Nelson Institute at University of Wisconsin-Madison, available at: [https://nelson.wisc.edu/sage/data-and-models/crop-calendar-dataset/index.php](https://nelson.wisc.edu/sage/data-and-models/crop-calendar-dataset/index.php).
-]
-
----
-
-
-# Auxillary data
-
-.right-column[
-- Population data from the Center for International Earth Science Information Network at Columbia University available at [https://sedac.ciesin.columbia.edu](https://sedac.ciesin.columbia.edu).
-- Weather data from the ERA5 reanalysis gridded data on daily 2m above the surface air temperatures and monthly averaged total precipitation from European Centre for Medium-Range Weather Forecasts (ECMWF) Copernicus Project, available at [https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels). 
-]
-
----
-
-
 # Conflict prevalence across Africa
 
-.right-column[
-```{r out.width='55%'}
-include_graphics('Figures/bars_map_legend_violence.png')
-```
-]
-
----
-
-
-
-# Conflict-prone countries and 'hotspots'
-
-.right-column[
-```{r out.width='55%'}
-include_graphics('Figures/map_hotspots.png')
+.pull-right[
+```{r out.width='80%'}
+include_graphics('Figures/conflict_map.png')
 ```
 ]
 
@@ -196,8 +163,8 @@ include_graphics('Figures/series_prices.png')
 
 # Geographic distributon of the harvest season
 
-.right-column[
-```{r out.width='55%'}
+.pull-right[
+```{r out.width='80%'}
 include_graphics('Figures/map_harvest.png')
 ```
 ]
@@ -208,8 +175,8 @@ include_graphics('Figures/map_harvest.png')
 
 # Main result
 
-.right-column[
-```{r out.width='55%'}
+.pull-right[
+```{r out.width='80%'}
 include_graphics('Figures/circular_violence_polit.png')
 ```
 ]
@@ -220,12 +187,10 @@ include_graphics('Figures/circular_violence_polit.png')
 # Key takeaways
 
 .right-column[
-- We asked the question: <span style="color: #cd5c5c;">**Is there seasonality in violent attacks against civilians across rural Africa?**</span>
-- We found that:
-  - The culprit is militias, specifically political militias; state forces and rebel groups play little role in "agricultural violence."
-  - A 1 S.D. annual price growth of the cereal grain increases violence by up to 5% during the harvest month.
-  - The effect dissipates in the following months.
-  - The effect is larger or more prolonged in the wake of favorable weather conditions during the growing season.
+- The culprit is militias, specifically political militias; state forces and rebel groups play little role in "agricultural violence."
+- A 1 S.D. annual price growth of the cereal grain increases violence by up to 5% during the harvest month.
+- The effect dissipates in the following months.
+- The effect is larger or more prolonged in the wake of favorable weather conditions during the growing season.
 ]
 
 ---
@@ -244,8 +209,8 @@ include_graphics('Figures/circular_violence_polit.png')
 
 # Conflict in the world's most conflict-prone country
 
-.right-column[
-```{r fig.align="left", out.width = "50%", dpi=200}
+.pull-right[
+```{r fig.align="left", out.width = "70%", dpi=200}
 include_graphics('Figures/Somalia_Map.png') 
 ```
 
@@ -270,11 +235,9 @@ include_graphics('Figures/price_transmission.png')
 # Key takeaways
 
 .right-column[
-- We asked the question: <span style="color: #cd5c5c;">**Does conflict impact market integration in Somalia?**</span>
-- We found that:
-  - Despite a lack of functioning formal economic institutions that span the entire country, Somali cereal markets are relatively well integrated or are in equilibrium across distances and internal borders; 
-  - Civil conflict, and the associated armed violence, slows but does not eliminate price transmission of imported rice; 
-  - Conflict does not appear to be a defining element in price transmission of locally produced maize and sorghum.
+- Despite a lack of functioning formal economic institutions that span the entire country, Somali cereal markets are relatively well integrated or are in equilibrium across distances and internal borders; 
+- Civil conflict, and the associated armed violence, slows but does not eliminate price transmission of imported rice; 
+- Conflict does not appear to be a defining element in price transmission of locally produced maize and sorghum.
 ]
 
 ---
@@ -287,17 +250,17 @@ include_graphics('Figures/price_transmission.png')
 ]
 
 .pull-right[
-[Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/aau038)
+[Bellemare, 2015](https://doi.org/10.1093/ajae/aau038)
 
-[Dube and Vargas, 2013](https://academic.oup.com/restud/article-abstract/80/4/1384/1579342)
+[Dube and Vargas, 2013](https://doi.org/10.1093/restud/rdt009)
 
 [Guardado and Pennings (2020)](https://elibrary.worldbank.org/doi/abs/10.1596/1813-9450-9373)
 
-[Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/31/3/272/6299941)
+[Hastings, et al. (2022)](https://doi.org/10.1093/jae/ejab012)
 
-[McGuirk and Burke, 2020](https://www.journals.uchicago.edu/doi/full/10.1086/709993)
+[McGuirk and Burke, 2020](https://doi.org/10.1086/709993)
 
-[Ubilava, et al. (2022)](https://arxiv.org/abs/2202.07863)
+[Ubilava, et al. (2023)](https://doi.org/10.1111/ajae.12364)
 
 
 ]

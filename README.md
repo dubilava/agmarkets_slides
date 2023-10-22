@@ -20,5 +20,9 @@ Below are the links to the lecture slides for the unit on agricultural markets.
 
 [Lecture 10: International Negotiations and Trade Policy](https://davidubilava.com/agmarkets_slides/10-TradePolicy.html)
 
+[Lecture 11: Conflict and Agriculture](https://davidubilava.com/agmarkets_slides/11-Conflict.html)
+
+[Lecture 12: Climate and Agriculture](https://davidubilava.com/agmarkets_slides/12-Climate.html)
+
 
 

@@ -279,6 +279,6 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 ]
 
 .pull-right[
-Tomek & Kaiser, Chapters 5 and 11
+Tomek & Kaiser, Chapters 5 & 11
 ]
 

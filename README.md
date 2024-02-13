@@ -1,9 +1,10 @@
-Below are the links to the lecture slides for the unit on agricultural markets.
+The lecture slides and readings for the unit on agricultural markets.
 
 [Lecture 1: Introduction to Agricultural Markets](https://davidubilava.com/agmarkets_slides/01-Intro.html)
 
 - Tomek & Kaiser, Chapter 1
 - Norton, Alwang & Masters, Chapter 1
+- Ferguson & Ubilava (2022). [Global commodity market disruption and the fallout](https://doi.org/10.1111/1467-8489.12497). *Australian Journal of Agricultural and Resource Economics, 66*(4): 737-752.
 
 [Lecture 2: Preferences and Demand](https://davidubilava.com/agmarkets_slides/02-Demand.html)
 

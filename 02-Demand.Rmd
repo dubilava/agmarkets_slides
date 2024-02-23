@@ -141,7 +141,7 @@ plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"
 - Changes to prices affect a consumer's decision-making. 
 - A consumer can afford and, thus, will purchase more of the same good as the price of the good drops. 
 - This is known as the *substitution effect*. 
-- The substitution effect is always inversely related to the price change.
+- The substitution effect is inversely related to the price change.
 ]
 
 ---
@@ -253,7 +253,7 @@ plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"
 
 .right-column[
 - For most functional forms, including the linear demand, the elasticity coefficient varies along the demand curve. 
-- Exceptions are if demand is represented by a straight horizontal line, a straight vertical line, a power function, and a rectangular hyperbola. 
+- Exceptions are if demand is represented by a horizontal line, a vertical line, a power function, and a rectangular hyperbola. 
 - In general, demand for different goods is usually categorized as elastic or inelastic.
 ]
 

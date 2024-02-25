@@ -24,6 +24,8 @@ knitr::opts_chunk$set(echo = FALSE)
 library(data.table)
 library(ggplot2)
 library(cowplot)
+library(extrafont)
+loadfonts(device="win",quiet=T)
 ```
 
 
@@ -95,19 +97,19 @@ b2 <- M/1-p2/1*x
 dt1 <- data.table(x,y1,y2,b1,b2)
 
 gg1 <- ggplot(dt1)+
-  geom_line(aes(x=x,y=y1),size=1,color="indianred",na.rm=T)+
-  geom_line(aes(x=x,y=y2),size=1,color="indianred",na.rm=T)+
-  geom_line(aes(x=x,y=b1),size=1,color="gray50",linetype=5,na.rm=T)+
-  geom_line(aes(x=x,y=b2),size=1,color="gray50",linetype=5,na.rm=T)+
-  geom_segment(aes(x=0,y=yp1,xend=xp1,yend=yp1),linetype=3,size=1)+
-  geom_segment(aes(x=xp1,y=yp1,xend=xp1,yend=0),linetype=3,size=1)+
-  geom_segment(aes(x=0,y=yp2,xend=xp2,yend=yp2),linetype=3,size=1)+
-  geom_segment(aes(x=xp2,y=yp2,xend=xp2,yend=0),linetype=3,size=1)+
+  geom_line(aes(x=x,y=y1),linewidth=.8,color="indianred",na.rm=T)+
+  geom_line(aes(x=x,y=y2),linewidth=.8,color="indianred",na.rm=T)+
+  geom_line(aes(x=x,y=b1),linewidth=.8,color="dimgray",linetype=5,na.rm=T)+
+  geom_line(aes(x=x,y=b2),linewidth=.8,color="dimgray",linetype=5,na.rm=T)+
+  geom_segment(aes(x=0,y=yp1,xend=xp1,yend=yp1),linetype=3,linewidth=.6)+
+  geom_segment(aes(x=xp1,y=yp1,xend=xp1,yend=0),linetype=3,linewidth=.6)+
+  geom_segment(aes(x=0,y=yp2,xend=xp2,yend=yp2),linetype=3,linewidth=.6)+
+  geom_segment(aes(x=xp2,y=yp2,xend=xp2,yend=0),linetype=3,linewidth=.6)+
   labs(x=expression(x[1]),y=expression(x[2]))+
   scale_x_continuous(expand=c(0,0),limits=c(0,115))+
   scale_y_continuous(expand=c(0,0),limits=c(0,115))+
   theme_classic()+
-  theme(axis.title=element_text(size=18,hjust=1,vjust=1),axis.title.y=element_text(angle=0),axis.text=element_text(size=16),plot.margin = margin(1,0,0,0,"cm"))
+  theme(axis.title=element_text(size=16,hjust=1,vjust=1,family="Segoe Print"),axis.title.y=element_text(angle=0,family="Segoe Print"),axis.text=element_text(size=14),plot.margin = margin(1,0,0,0,"cm"))
 
 p <- seq(.5,4,0.01)
 xp <- (p^(1/(r-1)))/(p^(r/(r-1))+1^(r/(r-1)))*M
@@ -115,19 +117,19 @@ xp <- (p^(1/(r-1)))/(p^(r/(r-1))+1^(r/(r-1)))*M
 dt2 <- data.table(p,xp)
 
 gg2 <- ggplot(dt2)+
-  geom_line(aes(x=xp,y=p),size=1,color="indianred",na.rm=T)+
-  geom_segment(aes(x=0,y=p1,xend=xp1,yend=p1),linetype=3,size=1)+
-  geom_segment(aes(x=xp1,y=p1,xend=xp1,yend=0),linetype=3,size=1)+
-  geom_segment(aes(x=0,y=p2,xend=xp2,yend=p2),linetype=3,size=1)+
-  geom_segment(aes(x=xp2,y=p2,xend=xp2,yend=0),linetype=3,size=1)+
+  geom_line(aes(x=xp,y=p),linewidth=.8,color="indianred",na.rm=T)+
+  geom_segment(aes(x=0,y=p1,xend=xp1,yend=p1),linetype=3,linewidth=.6)+
+  geom_segment(aes(x=xp1,y=p1,xend=xp1,yend=0),linetype=3,linewidth=.6)+
+  geom_segment(aes(x=0,y=p2,xend=xp2,yend=p2),linetype=3,linewidth=.6)+
+  geom_segment(aes(x=xp2,y=p2,xend=xp2,yend=0),linetype=3,linewidth=.6)+
   labs(x=expression(x[1]),y=expression(p[1]))+
   scale_x_continuous(expand=c(0,0),limits=c(0,115))+
   scale_y_continuous(expand=c(0,0),limits=c(0,4.5))+
   theme_classic()+
-  theme(axis.title=element_text(size=18,hjust=1,vjust=1),axis.title.y=element_text(angle=0),axis.text=element_text(size=16),plot.margin = margin(1,0,0,0,"cm"))
+  theme(axis.title=element_text(size=16,hjust=1,vjust=1,family="Segoe Print"),axis.title.y=element_text(angle=0),axis.text=element_text(size=14,family="Segoe Print"),plot.margin = margin(1,0,0,0,"cm"))
 
 
-plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"),hjust=0)
+plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"),label_colour="dimgray",hjust=0)
 ```
 ]
 
@@ -178,6 +180,45 @@ plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"
 - This is known as *Giffen's paradox*, and such goods are referred to as the *Giffen goods*. 
 - It might occur, for example, when a staple commodity, such as rice, constitutes a large portion of consumer's expenditures. 
 - By the same token, if the income effect outweighs the substitution effect, we might observe a negative relationship between the demand for product $i$ and the change in price of product $j$, even when the two are substitutes. 
+]
+
+---
+
+
+# Marshallian demand
+
+.pull-left[
+```{r, out.width = "300px"}
+knitr::include_graphics("Figures/Marshall.jpg")
+```
+Alfred Marshall, 1842-1924
+Credit: [Wikipedia](https://en.wikipedia.org/wiki/Alfred_Marshall)
+]
+
+.pull-right[
+
+- The Marshallian demand curve combines both the income and substitution effects of a price change. It is also known as the *uncompensated* demand curve.
+- By contrast, the Hicksian demand curve, which is also known as the *compensated* demand curve, only accounts for the substitution effect of a price change (by holding utility constant)
+
+]
+
+---
+
+
+# Lancastrian demand
+
+.pull-left[
+```{r, out.width = "300px"}
+knitr::include_graphics("Figures/Lancaster.jpg")
+```
+Kelvin Lancaster, 1924-1999
+Credit: [The HET website](https://www.hetwebsite.net/het/profiles/lancaster.htm)
+]
+
+.pull-right[
+
+- The Lancastrian demand is based on the assumption that a good is nothing more than a bundle of attributes (comprising the good).
+- So, our demand for the good is the sum of our demands for its attributes.
 ]
 
 ---

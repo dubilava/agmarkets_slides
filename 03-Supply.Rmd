@@ -16,11 +16,14 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(data.table)
 library(ggplot2)
+library(cowplot)
 library(geomtextpath)
+library(extrafont)
+loadfonts(device="win",quiet=T)
 ```
 
 
@@ -102,12 +105,12 @@ dt <- data.table(x,MC,ATC,AVC,AFC)
 dl <- melt(dt,id.vars="x")
 
 gg <- ggplot(dl,aes(x=x,y=value,color=variable,linetype=variable))+
-  geom_textline(aes(label=variable),size=6,linewidth=1,na.rm=T,hjust=.85)+
-  labs(x="q",y="f(C)")+
+  geom_textline(aes(label=variable),size=6,linewidth=.8,na.rm=T,hjust=.85)+
+  labs(x="q",y="f(C(q))")+
   scale_x_continuous(expand=c(0,0),limits=c(0,21))+
   scale_y_continuous(expand=c(0,0),limits=c(0,17))+
   theme_classic()+
-  theme(axis.title = element_text(size=18), axis.text = element_text(size=16),plot.margin = margin(1,0,0,0,"cm"),legend.position = "none")
+  theme(axis.title=element_text(size=16,hjust=1,vjust=1,family="Segoe Print"),axis.title.y=element_text(angle=0,family="Segoe Print"),axis.text=element_text(size=14),plot.margin = margin(1,0,0,0,"cm"),legend.position="none")
 
 gg
 

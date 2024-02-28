@@ -1,3 +1,5 @@
 data.table
 ggplot2
 geomtextpath
+cowplot
+extrafont

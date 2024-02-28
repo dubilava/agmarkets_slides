@@ -16,11 +16,8 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-```
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(data.table)
 library(ggplot2)
 library(cowplot)

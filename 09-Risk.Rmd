@@ -38,7 +38,7 @@ library(data.table)
 .pull-right[
 - Because of complexities of physical and economic systems in agriculture, most processes that consumers of agricultural commodities care about unfold with some degree of *uncertainty*.
 - Uncertainty means that any given action can lead to many possible outcomes.
-- Thus, a decision-making under uncertainty is characterized by *risk*, as not all possible consequences are equally desirable.
+- A decision-making under uncertainty is characterized by *risk*, as not all possible consequences are equally desirable.
 ]
 
 ---

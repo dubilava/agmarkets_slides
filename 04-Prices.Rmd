@@ -45,9 +45,9 @@ S <- cc+dd*x
 - Under such classification, four general types of markets are considered:
   * Perfectly competitive (many sellers);
 	*	Monopolistic (one seller);
-	* Oligopolistic (a few sellers);
+	* <span style="color: lightgray;">Oligopolistic (a few sellers);</span>
 	* Monopolistically competitive (many sellers of differentiated products).
-- The ``flip side'' of such markets may also be relevant (e.g., Monopsony and Oligopsony).
+- The "flip side" of such markets may also be relevant (e.g., Monopsony and Oligopsony).
 ]
 
 ---

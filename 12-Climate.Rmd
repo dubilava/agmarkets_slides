@@ -69,23 +69,23 @@ knitr::include_graphics("Figures/food-emissions-supply-chain.png")
 .right-column[
 A feedback loop is where $X$ causes $Y$ which either reinforces $X$ (positive feedback) or stabilizes $X$ (negative feedback).
 
-```{tikz, echo=FALSE, fig.align="center"}
+<!-- ```{tikz, echo=FALSE, fig.align="center"} -->
 
-\usetikzlibrary{shapes.geometric,arrows,positioning}
+<!-- \usetikzlibrary{shapes.geometric,arrows,positioning} -->
 
-\begin{tikzpicture}[node distance=1cm, auto,text width=4em,text centered]
- \node (e) {Effect};
- \node[below=0.85cm of e] (f) {Feedback};
- \node[above=0.02cm of f,red] (p) {+};
- \node[below=0.02cm of f,blue] (m) {--};
- \node[left=0.5cm of e] (g) {GHG}
-   edge[->] (e.west)
-   edge[<-,bend right=20] (f.west);
- \node[right=0.5cm of e] (o) {Outcome}
-   edge[<-] (e.east)
-   edge[->,bend left=20] (f.east);
-\end{tikzpicture}
-```
+<!-- \begin{tikzpicture}[node distance=1cm, auto,text width=4em,text centered] -->
+<!--  \node (e) {Effect}; -->
+<!--  \node[below=0.85cm of e] (f) {Feedback}; -->
+<!--  \node[above=0.02cm of f,red] (p) {+}; -->
+<!--  \node[below=0.02cm of f,blue] (m) {--}; -->
+<!--  \node[left=0.5cm of e] (g) {GHG} -->
+<!--    edge[->] (e.west) -->
+<!--    edge[<-,bend right=20] (f.west); -->
+<!--  \node[right=0.5cm of e] (o) {Outcome} -->
+<!--    edge[<-] (e.east) -->
+<!--    edge[->,bend left=20] (f.east); -->
+<!-- \end{tikzpicture} -->
+<!-- ``` -->
 ]
 
 ---

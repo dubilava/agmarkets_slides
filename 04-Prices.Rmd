@@ -280,5 +280,10 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 
 .pull-right[
 Tomek & Kaiser, Chapters 5 & 11
+
+[Masters & Finaret, Chapter 3](https://link.springer.com/chapter/10.1007/978-3-031-53840-7_3) (Section 3.1)
+
+[Masters & Finaret, Chapter 5](https://link.springer.com/chapter/10.1007/978-3-031-53840-7_5) (Section 5.1)
+
 ]
 

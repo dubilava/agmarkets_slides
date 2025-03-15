@@ -208,6 +208,10 @@ gg
 ]
 
 .pull-right[
+
 Tomek & Kaiser, Chapter 4
+
+[Masters & Finaret, Chapter 2](https://link.springer.com/chapter/10.1007/978-3-031-53840-7_2) (Sections 2.2 & 2.3)
+
 ]
 

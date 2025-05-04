@@ -136,7 +136,7 @@ library(data.table)
 # Futures market failure
 
 .right-column[
-- Assuring the return by hedging, crucially relies on the assumption of *convergence*. Convergence may not be exact (most of the time it is not). As a consequence, hedges do not give perfect results, which is also known as *basis risk*. 
+- Assuring the return by hedging, crucially relies on the assumption of *convergence*. Convergence may not be exact (most of the time it is not). As a consequence, hedges do not give perfect results, which is also known as [basis risk](https://www.cmegroup.com/education/courses/introduction-to-grains-and-oilseeds/learn-about-basis-grains.html). 
 - Thus, basis risk, or our inability to forecast convergence with certainty, poses a problem for hedgers.
 - Another possible problem is inherent to the production risk: in times of a negative supply shock, a portion of the hedge will turn into a speculative position, which can result in a loss on the position on the futures market.
 ]

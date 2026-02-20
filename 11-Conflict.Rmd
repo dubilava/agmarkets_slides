@@ -166,7 +166,8 @@ include_graphics('figures/series_prices.png')
 # Geographic distributon of the harvest season
 
 .pull-right[
-```{r map_harvest_image, out.width='80%'}`r`ninclude_graphics('figures/map_harvest.png')
+```{r map_harvest_image, out.width='80%'}
+include_graphics('figures/map_harvest.png')
 ```
 ]
 
@@ -177,7 +178,8 @@ include_graphics('figures/series_prices.png')
 # Main result
 
 .pull-right[
-```{r circular_violence_image, out.width='80%'}`r`ninclude_graphics('figures/circular_violence_polit.png')
+```{r circular_violence_image, out.width='80%'}
+include_graphics('figures/circular_violence_polit.png')
 ```
 ]
 
@@ -210,7 +212,8 @@ include_graphics('figures/series_prices.png')
 # Conflict in the world's most conflict-prone country
 
 .pull-right[
-```{r somalia_map_image, fig.align="left", out.width = "70%", dpi=200}`r`ninclude_graphics('figures/Somalia_Map.png') 
+```{r somalia_map_image, fig.align="left", out.width = "70%", dpi=200}
+include_graphics('figures/Somalia_Map.png') 
 ```
 
 Source: [Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/31/3/272/6299941)
@@ -223,7 +226,8 @@ Source: [Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/
 
 
 .right-column[
-```{r price_transmission_image, out.width='100%'}`r`ninclude_graphics('figures/price_transmission.png')
+```{r price_transmission_image, out.width='100%'}
+include_graphics('figures/price_transmission.png')
 ```
 ]
 

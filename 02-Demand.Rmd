@@ -28,7 +28,10 @@ if (requireNamespace("cowplot", quietly = TRUE)) {
   plot_grid <- function(..., nrow = 1, ncol = NULL, labels = NULL, label_colour = NULL, hjust = NULL, align = NULL) {
     plots <- list(...)
     if (requireNamespace("gridExtra", quietly = TRUE)) {
-      return(do.call(gridExtra::arrangeGrob, c(plots, list(nrow = nrow, ncol = ncol))))
+      g <- do.call(gridExtra::arrangeGrob, c(plots, list(nrow = nrow, ncol = ncol)))
+      grid::grid.newpage()
+      grid::grid.draw(g)
+      return(invisible(g))
     }
     warning("cowplot not installed; returning first plot only.")
     plots[[1]]
@@ -81,7 +84,7 @@ if (requireNamespace("extrafont", quietly = TRUE)) {
 # Choice and individual demand
 
 .right-column[
-```{r demand, out.width='100%', fig.asp=0.5, dpi=300, echo=FALSE, warning=FALSE, cache=TRUE}
+```{r demand, out.width='100%', fig.asp=0.5, dpi=300, echo=FALSE, warning=FALSE, cache=FALSE}
 
 x <- seq(0.0,110,0.1)
 
@@ -220,7 +223,8 @@ Credit: [Wikipedia](https://en.wikipedia.org/wiki/Alfred_Marshall)
 # Lancastrian demand
 
 .pull-left[
-```{r lancaster_photo, out.width = "300px"}`r`nknitr::include_graphics("figures/Lancaster.jpg")
+```{r lancaster_photo, out.width = "300px"}
+knitr::include_graphics("figures/Lancaster.jpg")
 ```
 Kelvin Lancaster, 1924-1999
 Credit: [The HET website](https://www.hetwebsite.net/het/profiles/lancaster.htm)

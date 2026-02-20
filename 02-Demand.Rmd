@@ -47,7 +47,7 @@ if (requireNamespace("extrafont", quietly = TRUE)) {
 # What consumer wants is not what consumer gets
 
 .pull-left[
-![](art/demand.png)
+![](art/02-image.png)
 ]
 
 .pull-right[

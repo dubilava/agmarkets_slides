@@ -42,7 +42,7 @@ if (requireNamespace("extrafont", quietly = TRUE)) {
 # Firms maximize profit
 
 .pull-left[
-![](art/supply.png)
+![](art/03-image.png)
 ]
 
 .pull-right[

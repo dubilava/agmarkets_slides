@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -20,16 +22,29 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 library(data.table)
 library(ggplot2)
-library(cowplot)
-library(extrafont)
-loadfonts(device="win",quiet=T)
+if (requireNamespace("cowplot", quietly = TRUE)) {
+  library(cowplot)
+} else {
+  plot_grid <- function(..., nrow = 1, ncol = NULL, labels = NULL, label_colour = NULL, hjust = NULL, align = NULL) {
+    plots <- list(...)
+    if (requireNamespace("gridExtra", quietly = TRUE)) {
+      return(do.call(gridExtra::arrangeGrob, c(plots, list(nrow = nrow, ncol = ncol))))
+    }
+    warning("cowplot not installed; returning first plot only.")
+    plots[[1]]
+  }
+}
+if (requireNamespace("extrafont", quietly = TRUE)) {
+  library(extrafont)
+  try(loadfonts(device = "win", quiet = TRUE), silent = TRUE)
+}
 ```
 
 
 # What consumer wants is not what consumer gets
 
 .pull-left[
-![](Art/demand.png)
+![](art/demand.png)
 ]
 
 .pull-right[
@@ -185,8 +200,8 @@ plot_grid(gg1,gg2,align="h",nrow=1,labels=c("Optimal Bundle","Individual Demand"
 # Marshallian demand
 
 .pull-left[
-```{r, out.width = "300px"}
-knitr::include_graphics("Figures/Marshall.jpg")
+```{r marshall_photo, out.width = "300px"}
+knitr::include_graphics("figures/Marshall.jpg")
 ```
 Alfred Marshall, 1842-1924
 Credit: [Wikipedia](https://en.wikipedia.org/wiki/Alfred_Marshall)
@@ -205,8 +220,7 @@ Credit: [Wikipedia](https://en.wikipedia.org/wiki/Alfred_Marshall)
 # Lancastrian demand
 
 .pull-left[
-```{r, out.width = "300px"}
-knitr::include_graphics("Figures/Lancaster.jpg")
+```{r lancaster_photo, out.width = "300px"}`r`nknitr::include_graphics("figures/Lancaster.jpg")
 ```
 Kelvin Lancaster, 1924-1999
 Credit: [The HET website](https://www.hetwebsite.net/het/profiles/lancaster.htm)
@@ -375,11 +389,13 @@ Credit: [The HET website](https://www.hetwebsite.net/het/profiles/lancaster.htm)
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
 Tomek & Kaiser, Chapters 2 & 3
+
+Norton, Alwang & Masters, Chapter 3
 
 [Masters & Finaret, Chapter 2](https://link.springer.com/chapter/10.1007/978-3-031-53840-7_2) (Section 2.1)
 

@@ -4,20 +4,25 @@ The lecture slides and readings for the unit on agricultural markets.
 
 - Tomek & Kaiser, Chapter 1
 - Norton, Alwang & Masters, Chapter 1
+- Masters & Finaret, Chapter 1
 - Ferguson & Ubilava (2022). [Global commodity market disruption and the fallout](https://doi.org/10.1111/1467-8489.12497). *Australian Journal of Agricultural and Resource Economics, 66*(4): 737-752.
 
 [Lecture 2: Preferences and Demand](https://davidubilava.com/agmarkets_slides/02-Demand.html)
 
 - Tomek & Kaiser, Chapters 2 & 3
 - Norton, Alwang & Masters, Chapter 3
+- Masters & Finaret, Chapter 2 (Section 2.1)
 
 [Lecture 3: Costs and Supply](https://davidubilava.com/agmarkets_slides/03-Supply.html)
 
 - Tomek & Kaiser, Chapter 4
+- Masters & Finaret, Chapter 2 (Sections 2.2 & 2.3)
 
 [Lecture 4: Market Structure and Price Determination](https://davidubilava.com/agmarkets_slides/04-Prices.html)
 
 - Tomek & Kaiser, Chapters 5 & 11 (until "Government Intervention in Pricing Agricultural Products")
+- Masters & Finaret, Chapter 3 (Section 3.1)
+- Masters & Finaret, Chapter 5 (Section 5.1)
 
 [Lecture 5: Marketing System and Margins](https://davidubilava.com/agmarkets_slides/05-Vertical.html)
 
@@ -53,6 +58,10 @@ The lecture slides and readings for the unit on agricultural markets.
 [Lecture 11: Conflict and Agriculture](https://davidubilava.com/agmarkets_slides/11-Conflict.html)
 
 - Bellemare (2015). [Rising Food Prices, Food Price Volatility, and Social Unrest](https://doi.org/10.1093/ajae/aau038). *American Journal of Agricultural Economics, 97*(1): 1-21.
+- Dube and Vargas (2013). [Commodity Price Shocks and Civil Conflict: Evidence from Colombia](https://doi.org/10.1093/restud/rdt009). *Review of Economic Studies*.
+- Guardado and Pennings (2020). [The Seasonality of Conflict: An Empirical Analysis](https://elibrary.worldbank.org/doi/abs/10.1596/1813-9450-9373). *World Bank Policy Research Working Paper*.
+- Hastings et al. (2022). [The Geography of Conflict and Agricultural Production](https://doi.org/10.1093/jae/ejab012). *Journal of African Economies*.
+- McGuirk and Burke (2020). [The Economic Origins of Conflict in Africa](https://doi.org/10.1086/709993). *Journal of Political Economy*.
 - Ubilava, Hastings & Atalay (2023). [Agricultural windfalls and the seasonality of political violence in Africa](https://doi.org/10.1111/ajae.12364). *American Journal of Agricultural Economics, 105*(5): 1309-1332.
 
 [Lecture 12: Climate and Agriculture](https://davidubilava.com/agmarkets_slides/12-Climate.html)

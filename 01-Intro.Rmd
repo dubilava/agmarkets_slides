@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -25,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Turbulence in agricultural markets
 
 .pull-left[
-![](Art/intro.png)
+![](art/intro.png)
 ]
 
 .pull-right[
@@ -46,7 +48,7 @@ Agricultural markets are globally integrated. A shock in one region has repercus
 ]
 
 .pull-right[
-![Export Levels](Figures/wheat.png)
+![Export Levels](figures/wheat.png)
 ]
 
 ---
@@ -60,7 +62,7 @@ Agricultural markets are globally integrated. A shock in one region has repercus
 ]
 
 .pull-right[
-![Export Levels](Figures/exports.png)
+![Export Levels](figures/exports.png)
 ]
 
 ---
@@ -74,7 +76,7 @@ Agricultural markets are globally integrated. A shock in one region has repercus
 ]
 
 .pull-right[
-![Export Levels](Figures/production.png)
+![Export Levels](figures/production.png)
 ]
 
 ---
@@ -89,7 +91,7 @@ Agricultural markets are globally integrated. A shock in one region has repercus
 ]
 
 .pull-right[
-![Export Levels](Figures/commodity_prices.png)
+![Export Levels](figures/commodity_prices.png)
 ]
 
 ---
@@ -325,11 +327,13 @@ When an increase in commodity prices is income-enhancing, two effects of opposit
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
 Tomek & Kaiser, Chapter 1
+
+Norton, Alwang & Masters, Chapter 1
 
 [Masters & Finaret, Chapter 1](https://link.springer.com/chapter/10.1007/978-3-031-53840-7_1)
 

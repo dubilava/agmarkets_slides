@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -23,16 +25,18 @@ knitr::opts_chunk$set(echo = FALSE, fig.width = 11, fig.height = 7)
 ```
 
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r risk_setup_hidden, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
-library(cowplot)
 library(data.table)
+if (requireNamespace("cowplot", quietly = TRUE)) {
+  library(cowplot)
+}
 ```
 
 # Uncertainty and risk
 
 .pull-left[
-![](Art/risk.png)
+![](art/risk.png)
 ]
 
 .pull-right[
@@ -295,11 +299,13 @@ library(data.table)
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
-Norton, Alwang & Masters, Chapter 14
+Tomek & Kaiser, Chapter 11 ("Government Intervention in Pricing Agricultural Products") & 13 (until "Price Discovery")
+
+Norton, Alwang & Masters, Chapter 14 ("Finance, Risk, and Insurance")
 
 Garcia, Irwin & Smith (2015). [Futures Market Failure?](https://doi.org/10.1093/ajae/aau067). *American Journal of Agricultural Economics, 97*(1): 40-64.
 ]

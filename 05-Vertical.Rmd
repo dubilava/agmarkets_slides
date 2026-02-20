@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -20,7 +22,13 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 library(data.table)
 library(ggplot2)
-library(geomtextpath)
+if (requireNamespace("geomtextpath", quietly = TRUE)) {
+  library(geomtextpath)
+} else {
+  geom_textline <- function(mapping = NULL, data = NULL, ..., na.rm = FALSE, show.legend = NA, inherit.aes = TRUE) {
+    ggplot2::geom_line(mapping = mapping, data = data, ..., na.rm = na.rm, show.legend = show.legend, inherit.aes = inherit.aes)
+  }
+}
 
 x <- seq(0,25,0.1)
 
@@ -42,7 +50,7 @@ Sr <- Sf+m0+m1*x
 # Marketing system links farmers with consumers
 
 .pull-left[
-![](Art/vertical.png)
+![](art/vertical.png)
 ]
 
 .pull-right[
@@ -248,7 +256,7 @@ ggplot(dl,aes(x=x,y=value,color=variable))+
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[

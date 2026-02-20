@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -23,17 +25,21 @@ knitr::opts_chunk$set(echo = FALSE, fig.width = 11, fig.height = 7)
 ```
 
 
-```{r echo=FALSE, include=FALSE, message=FALSE}
+```{r temporal_setup_hidden, echo=FALSE, include=FALSE, message=FALSE}
 library(ggplot2)
 library(data.table)
-library(cowplot)
-library(forecast)
+if (requireNamespace("cowplot", quietly = TRUE)) {
+  library(cowplot)
+}
+if (requireNamespace("forecast", quietly = TRUE)) {
+  library(forecast)
+}
 ```
 
 # Prices change over time
 
 .pull-left[
-![](Art/temporal.png)
+![](art/temporal.png)
 ]
 
 .pull-right[
@@ -85,7 +91,7 @@ library(forecast)
 
 .right-column[
 ```{r maize, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE}
-dt <- fread("Data/CMO-Historical-Data-Monthly.csv")
+dt <- fread("data/CMO-Historical-Data-Monthly.csv")
 
 dt$DATE <- as.Date(dt$DATE,format="%d/%m/%Y")
 
@@ -174,23 +180,8 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ]
 
 .pull-right[
-```{tikz cobweb, out.width='90%', fig.asp=1.0, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=FALSE}
-\begin{tikzpicture}[scale=1]
-% Draw axes
-\draw[<->,thick] (0,10) node[below left] {$P$} -- (0,0) -- (12,0) node[below left] {$Q$};
-
-\draw[solid,very thick] (1,1) to (9,9) node[below right]{$S$};
-\draw[solid,very thick] (1,8) to (10,2) node[below right]{$D$};
-
-\draw[->,dashed,thick] (0,7) to (7,7);
-\draw[->,dashed,thick] (7,7) to (7,4);
-\draw[->,dashed,thick] (7,4) to (4,4);
-\draw[->,dashed,thick] (4,4) to (4,6);
-\draw[->,dashed,thick] (4,6) to (6,6);
-\draw[->,dashed,thick] (6,6) to (6,4.67);
-\draw[->,dashed,thick] (6,4.67) to (4.67,4.67);
-\draw[->,dashed,thick] (4.67,4.67) to (4.67,5.55);
-\end{tikzpicture}
+```{r cobweb_image, out.width='90%', fig.align='center', echo=FALSE}
+knitr::include_graphics("07-Temporal_files/figure-html/cobweb-1.png")
 ```
 ]
 
@@ -225,16 +216,8 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 ]
 
 .pull-right[
-```{tikz season, out.width='100%', fig.asp=1.0, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=FALSE}
-\begin{tikzpicture}[scale=1]
-% Draw axes
-\draw[<->,thick] (0,8) node[below left] {$p$} -- (0,0) -- (13,0) node[below left] {$t$};
-\clip (0,0) rectangle (12,7);
-\draw [very thick] plot [smooth] coordinates {(1,2) (5,5) (6,2) (10,5) (11,2) (15,5)};
-
-\draw [thick,dashed] (5.5,6) node[above] {harvest} -- (5.5,0);
-
-\end{tikzpicture}
+```{r season_image, out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("07-Temporal_files/figure-html/season-1.png")
 ```
 ]
 
@@ -317,7 +300,7 @@ ggplot(dt,aes(x=DATE,y=MAIZE))+
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[

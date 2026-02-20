@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -30,7 +32,7 @@ library(knitr)
 # GHG emissions and global warming
 
 .pull-left[
-![](Art/climate.png)
+![](art/climate.png)
 ]
 .pull-right[
 - People, through their consumption and production decisions, facilitate Greenhouse Gas (GHG) emissions.
@@ -46,7 +48,7 @@ library(knitr)
 
 .right-column[
 ```{r by-sector, echo=FALSE, fig.align='left', out.width = '60%'}
-knitr::include_graphics("Figures/Emissions-by-sector-–-pie-charts.png")
+knitr::include_graphics("figures/emissions-by-sector-pie-charts.png")
 ```
 ]
 
@@ -57,7 +59,7 @@ knitr::include_graphics("Figures/Emissions-by-sector-–-pie-charts.png")
 
 .right-column[
 ```{r supply-chain, echo=FALSE, fig.align='left', out.width = '80%'}
-knitr::include_graphics("Figures/food-emissions-supply-chain.png")
+knitr::include_graphics("figures/food-emissions-supply-chain.png")
 ```
 ]
 
@@ -117,7 +119,7 @@ A feedback loop is where $X$ causes $Y$ which either reinforces $X$ (positive fe
 
 .right-column[
 ```{r temperature, echo=FALSE, fig.align='left', out.width='80%'}
-knitr::include_graphics("Figures/temperature-anomaly.png")
+knitr::include_graphics("figures/temperature-anomaly.png")
 ```
 ]
 
@@ -128,7 +130,7 @@ knitr::include_graphics("Figures/temperature-anomaly.png")
 
 .right-column[
 ```{r scenarios, echo=FALSE, fig.align='left', out.width = '80%'}
-knitr::include_graphics("Figures/Greenhouse-gas-emission-scenarios-01.png")
+knitr::include_graphics("figures/Greenhouse-gas-emission-scenarios-01.png")
 ```
 ]
 
@@ -286,7 +288,7 @@ and manage their existing woodlands to contribute to carbon retention.
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[

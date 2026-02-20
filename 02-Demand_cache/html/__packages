@@ -1,4 +1,9 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
 data.table
 ggplot2
-cowplot
-extrafont

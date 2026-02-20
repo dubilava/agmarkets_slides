@@ -4,7 +4,7 @@
     <title>Agricultural Markets</title>
     <meta charset="utf-8" />
     <meta name="author" content="David Ubilava" />
-    <script src="libs/header-attrs-2.26/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.30/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -36,7 +36,7 @@ class: center, middle, inverse, title-slide
 # Agriculture can cause or result in conflict 
 
 .pull-left[
-![](Art/conflict.png)
+![](art/conflict.png)
 ]
 
 .pull-right[
@@ -59,7 +59,7 @@ class: center, middle, inverse, title-slide
 # Food riots
 
 .right-column[
-&lt;img src="Figures/Food_Riots.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
+&lt;img src="figures/Food_Riots.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/aau038)
 ]
@@ -147,7 +147,7 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 # Conflict prevalence across Africa
 
 .pull-right[
-&lt;img src="Figures/conflict_map.png" width="80%" /&gt;
+&lt;img src="figures/conflict_map.png" width="80%" /&gt;
 ]
 
 ---
@@ -157,7 +157,7 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 # Prices of the major cereals
 
 .right-column[
-&lt;img src="Figures/series_prices.png" width="100%" /&gt;
+&lt;img src="figures/series_prices.png" width="100%" /&gt;
 ]
 
 ---
@@ -166,7 +166,8 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 # Geographic distributon of the harvest season
 
 .pull-right[
-&lt;img src="Figures/map_harvest.png" width="80%" /&gt;
+```{r map_harvest_image, out.width='80%'}`r`ninclude_graphics('figures/map_harvest.png')
+```
 ]
 
 ---
@@ -176,7 +177,8 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 # Main result
 
 .pull-right[
-&lt;img src="Figures/circular_violence_polit.png" width="80%" /&gt;
+```{r circular_violence_image, out.width='80%'}`r`ninclude_graphics('figures/circular_violence_polit.png')
+```
 ]
 
 ---
@@ -208,7 +210,8 @@ Source: [Bellemare, 2015](https://onlinelibrary.wiley.com/doi/abs/10.1093/ajae/a
 # Conflict in the world's most conflict-prone country
 
 .pull-right[
-&lt;img src="Figures/Somalia_Map.png" width="70%" style="display: block; margin: auto auto auto 0;" /&gt;
+```{r somalia_map_image, fig.align="left", out.width = "70%", dpi=200}`r`ninclude_graphics('figures/Somalia_Map.png') 
+```
 
 Source: [Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/31/3/272/6299941)
 ]
@@ -220,7 +223,8 @@ Source: [Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/
 
 
 .right-column[
-&lt;img src="Figures/price_transmission.png" width="100%" /&gt;
+```{r price_transmission_image, out.width='100%'}`r`ninclude_graphics('figures/price_transmission.png')
+```
 ]
 
 ---
@@ -240,7 +244,7 @@ Source: [Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
@@ -262,9 +266,9 @@ Source: [Hastings, et al. (2022)](https://academic.oup.com/jae/article-abstract/
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"countIncrementalSlides": false,
-"ratio": "16:9"
+  "highlightStyle": "github",
+  "countIncrementalSlides": false,
+  "ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -396,7 +400,7 @@ slideshow._releaseMath(document);
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -23,14 +25,28 @@ header-includes:
 knitr::opts_chunk$set(echo = FALSE)
 library(data.table)
 library(ggplot2)
-library(cowplot)
+if (requireNamespace("cowplot", quietly = TRUE)) {
+  library(cowplot)
+} else {
+  plot_grid <- function(..., nrow = 1, ncol = NULL, labels = NULL, label_colour = NULL, hjust = NULL, align = NULL) {
+    plots <- list(...)
+    if (requireNamespace("gridExtra", quietly = TRUE)) {
+      g <- do.call(gridExtra::arrangeGrob, c(plots, list(nrow = nrow, ncol = ncol)))
+      grid::grid.newpage()
+      grid::grid.draw(g)
+      return(invisible(g))
+    }
+    warning("cowplot not installed; returning first plot only.")
+    plots[[1]]
+  }
+}
 ```
 
 
 # Linkage across spatially separated markets
 
 .pull-left[
-![](Art/spatial.png)
+![](art/spatial.png)
 ]
 
 .pull-right[
@@ -75,7 +91,7 @@ library(cowplot)
 # Spatial equilibrium model
 
 .right-column[
-```{r trade, out.width='100%', fig.asp=0.5, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=TRUE}
+```{r trade, out.width='100%', fig.asp=0.5, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=FALSE}
 
 x <- seq(.1,13,0.01)
 
@@ -200,14 +216,8 @@ plot_grid(gg1,ggi,gg2,align="v",nrow=1,hjust=0)
 # The structure of prices
 
 .pull-left[
-```{tikz structure, out.width='100%', fig.asp=1.0, dpi=200, fig.align='center', echo=FALSE, warning=FALSE, cache=FALSE}
-\definecolor{indianred}{rgb}{0.80,0.36,0.36}
-\definecolor{steelblue}{rgb}{0.27,0.51,0.71}
-\begin{tikzpicture}[scale=1]
-\draw[thick,dashed] (0,5) node[left] {\Large $X$} -- (2,1) node[below] {\Large $A$} -- (8,2) node[right] {\Large $Y$} -- (5,9) node[above] {\Large $B$} -- (0,5) -- (8,2);
-\draw (-0.5,5) node[steelblue,left] {\Large $\$3.00$} (2,.5) node[steelblue,below] {\Large $\$2.90$} (8.5,2) node[steelblue,right] {\Large $\$3.30$} (5,9.5) node[steelblue,above] {\Large $\$3.10$};
-\draw (1,3) node[indianred,below left] {\Large $\$0.10$} (5,1.25) node[indianred,below] {\Large $\$0.40$} (6.5,5.5) node[indianred,above right] {\Large $\$0.20$} (2.5,7) node[indianred,above left] {\Large $\$0.30$} (3.5,3.75) node[indianred,above right] {\Large $\$0.50$};
-\end{tikzpicture}
+```{r structure_image, out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("06-Spatial_files/figure-html/structure-1.png")
 ```
 ]
 
@@ -297,11 +307,11 @@ plot_grid(gg1,ggi,gg2,align="v",nrow=1,hjust=0)
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
-Tomek & Kaiser, Chapter 8
+Tomek & Kaiser, Chapter 8 (until "Impact of Trade Barriers")
 
-Norton, Alwang & Masters, Chapter 16
+Norton, Alwang & Masters, Chapter 16 (until "Trade Impediments")
 ]

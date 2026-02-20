@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -28,7 +30,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Free Trade
 
 .pull-left[
-![](Art/negotiation.png)
+![](art/negotiation.png)
 ]
 
 .pull-right[
@@ -255,13 +257,13 @@ knitr::opts_chunk$set(echo = FALSE)
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
-Tomek & Kaiser, Chapter 8
+Tomek & Kaiser, Chapter 8 ("Impact of Trade Barriers")
 
-Norton, Alwang & Masters, Chapters 16 & 17
+Norton, Alwang & Masters, Chapters 16 ("Trade Impediments") & 17
 
 Martin & Messerlin (2007). [Why is it so difficult? Trade liberalization under the Doha Agenda](https://doi.org/10.1093/oxrep/grm026). *Oxford Review of Economic Policy 23*(3), 347-366.
 ]

@@ -7,6 +7,8 @@ output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts, style.css]
     lib_dir: libs
+    mathjax: 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML'
+
     includes:
       after_body: insert-logo.html
     nature:
@@ -23,17 +25,19 @@ knitr::opts_chunk$set(echo = FALSE, fig.width = 11, fig.height = 7)
 ```
 
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r futures_setup_hidden, echo=FALSE, warning=FALSE, message=FALSE}
 library(ggplot2)
-library(cowplot)
 library(data.table)
+if (requireNamespace("cowplot", quietly = TRUE)) {
+  library(cowplot)
+}
 ```
 
 
 # Futures Contracts
 
 .pull-left[
-![](Art/futures.png)
+![](art/futures.png)
 ]
 
 .pull-right[	
@@ -206,9 +210,9 @@ ggplot(dt)+
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
-Tomek & Kaiser, Chapter 12
+Tomek & Kaiser, Chapters 12 & 13 ("Price Discovery")
 ]

@@ -4,7 +4,7 @@
     <title>Agricultural Markets</title>
     <meta charset="utf-8" />
     <meta name="author" content="David Ubilava" />
-    <script src="libs/header-attrs-2.26/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.30/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
@@ -37,7 +37,7 @@ class: center, middle, inverse, title-slide
 # What consumer wants is not what consumer gets
 
 .pull-left[
-![](Art/demand.png)
+![](art/demand.png)
 ]
 
 .pull-right[
@@ -74,7 +74,13 @@ class: center, middle, inverse, title-slide
 # Choice and individual demand
 
 .right-column[
-&lt;img src="02-Demand_files/figure-html/demand-1.png" width="100%" /&gt;
+
+```
+## TableGrob (1 x 2) "arrange": 2 grobs
+##   z     cells    name           grob
+## 1 1 (1-1,1-1) arrange gtable[layout]
+## 2 2 (1-1,2-2) arrange gtable[layout]
+```
 ]
 
 ---
@@ -132,7 +138,7 @@ class: center, middle, inverse, title-slide
 # Marshallian demand
 
 .pull-left[
-&lt;img src="Figures/Marshall.jpg" width="300px" /&gt;
+&lt;img src="figures/Marshall.jpg" width="300px" /&gt;
 Alfred Marshall, 1842-1924
 Credit: [Wikipedia](https://en.wikipedia.org/wiki/Alfred_Marshall)
 ]
@@ -150,7 +156,8 @@ Credit: [Wikipedia](https://en.wikipedia.org/wiki/Alfred_Marshall)
 # Lancastrian demand
 
 .pull-left[
-&lt;img src="Figures/Lancaster.jpg" width="300px" /&gt;
+```{r lancaster_photo, out.width = "300px"}`r`nknitr::include_graphics("figures/Lancaster.jpg")
+```
 Kelvin Lancaster, 1924-1999
 Credit: [The HET website](https://www.hetwebsite.net/het/profiles/lancaster.htm)
 ]
@@ -318,11 +325,13 @@ Credit: [The HET website](https://www.hetwebsite.net/het/profiles/lancaster.htm)
 # Readings
 
 .pull-left[
-![](Art/readings.png)
+![](art/readings.png)
 ]
 
 .pull-right[
 Tomek &amp; Kaiser, Chapters 2 &amp; 3
+
+Norton, Alwang &amp; Masters, Chapter 3
 
 [Masters &amp; Finaret, Chapter 2](https://link.springer.com/chapter/10.1007/978-3-031-53840-7_2) (Section 2.1)
 
@@ -331,9 +340,9 @@ Tomek &amp; Kaiser, Chapters 2 &amp; 3
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"countIncrementalSlides": false,
-"ratio": "16:9"
+  "highlightStyle": "github",
+  "countIncrementalSlides": false,
+  "ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -465,7 +474,7 @@ slideshow._releaseMath(document);
 (function () {
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  script.src  = 'libs/mathjax-27/MathJax.js?config=TeX-MML-AM_CHTML';
   if (location.protocol !== 'file:' && /^https?:/.test(script.src))
     script.src  = script.src.replace(/^https?:/, '');
   document.getElementsByTagName('head')[0].appendChild(script);

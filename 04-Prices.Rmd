@@ -45,7 +45,7 @@ S <- cc+dd*x
 # Market Structure
 
 .pull-left[
-![](art/markets.png)
+![](art/04-image.png)
 ]
 
 .pull-right[

@@ -50,7 +50,7 @@ Sr <- Sf+m0+m1*x
 # Marketing system links farmers with consumers
 
 .pull-left[
-![](art/vertical.png)
+![](art/05-image.png)
 ]
 
 .pull-right[

@@ -46,7 +46,7 @@ if (requireNamespace("cowplot", quietly = TRUE)) {
 # Linkage across spatially separated markets
 
 .pull-left[
-![](art/spatial.png)
+![](art/06-image.png)
 ]
 
 .pull-right[

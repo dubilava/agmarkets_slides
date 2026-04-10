@@ -91,15 +91,15 @@ if (requireNamespace("forecast", quietly = TRUE)) {
 
 .right-column[
 ```{r maize, echo=FALSE, message=FALSE, warning=FALSE, cache=FALSE}
-dt <- fread("data/CMO-Historical-Data-Monthly.csv")
+dt <- fread("data/pink_sheet_combined_wide.csv")
 
-dt$DATE <- as.Date(dt$DATE,format="%d/%m/%Y")
+dt$Date <- as.Date(dt$Date,format="%d/%m/%Y")
 
-ggplot(dt,aes(x=DATE,y=MAIZE))+
+ggplot(dt,aes(x=Date,y=Maize_mt_dollar))+
   geom_line(color="indianred",linewidth=.8)+
-  labs(x="Year",y="Maize Price (US$/MT)",caption="retrieved from the World Bank 'Pink Sheet' Data\nhttps://www.worldbank.org/en/research/commodity-markets")+
+  labs(x="Year",y="",subtitle="(US$/MT)",caption="retrieved from the World Bank 'Pink Sheet' Data\nhttps://www.worldbank.org/en/research/commodity-markets")+
   theme_classic()+
-  theme(axis.title=element_text(size=22),axis.text = element_text(size=18),plot.caption=element_text(size=16,color="dimgray"))
+  theme(axis.title=element_text(size=22),axis.text = element_text(size=18),plot.caption=element_text(size=16,color="dimgray"),plot.title.position = "plot")
 ```
 ]
 

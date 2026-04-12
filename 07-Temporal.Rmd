@@ -39,7 +39,7 @@ if (requireNamespace("forecast", quietly = TRUE)) {
 # Prices change over time
 
 .pull-left[
-![](art/temporal.png)
+![](art/07-image.png)
 ]
 
 .pull-right[

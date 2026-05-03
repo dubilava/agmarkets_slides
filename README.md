@@ -42,12 +42,13 @@ The lecture slides and readings for the unit on agricultural markets.
 [Lecture 8: Futures Markets and Prices](https://davidubilava.com/agmarkets_slides/08-Futures.html)
 
 - Tomek & Kaiser, Chapters 12 & 13 ("Price Discovery")
+- Garcia, Irwin & Smith (2015). [Futures Market Failure?](https://doi.org/10.1093/ajae/aau067). *American Journal of Agricultural Economics, 97*(1): 40-64.
 
 [Lecture 9: Risk and Insurance](https://davidubilava.com/agmarkets_slides/09-Risk.html)
 
 - Tomek & Kaiser, Chapter 11 ("Government Intervention in Pricing Agricultural Products") & 13 (until "Price Discovery")
 - Norton, Alwang & Masters, Chapter 14 ("Finance, Risk, and Insurance")
-- Garcia, Irwin & Smith (2015). [Futures Market Failure?](https://doi.org/10.1093/ajae/aau067). *American Journal of Agricultural Economics, 97*(1): 40-64.
+
 
 [Lecture 10: International Negotiations and Trade Policy](https://davidubilava.com/agmarkets_slides/10-TradePolicy.html)
 

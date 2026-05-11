@@ -37,7 +37,7 @@ if (requireNamespace("cowplot", quietly = TRUE)) {
 # Futures Contracts
 
 .pull-left[
-![](art/futures.png)
+![](art/08-image.png)
 ]
 
 .pull-right[	
@@ -215,4 +215,7 @@ ggplot(dt)+
 
 .pull-right[
 Tomek & Kaiser, Chapters 12 & 13 ("Price Discovery")
+
+Garcia, Irwin & Smith (2015). [Futures Market Failure?](https://doi.org/10.1093/ajae/aau067). *American Journal of Agricultural Economics, 97*(1): 40-64.
+
 ]

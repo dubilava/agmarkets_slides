@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # Free Trade
 
 .pull-left[
-![](art/negotiation.png)
+![](art/10-image.png)
 ]
 
 .pull-right[
